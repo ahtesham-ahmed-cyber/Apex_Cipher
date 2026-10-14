@@ -1,0 +1,930 @@
+# MASTER PROMPT — APEX CIPHER
+## A technology team by The Secure Script
+### Premium Enterprise Technology Website | Advanced UI/UX | HTML, CSS & Vanilla JavaScript
+
+You are a senior frontend engineer, premium UI/UX designer, creative director, and web interaction specialist.
+
+Your task is to build APEX CIPHER, a sophisticated, original, multipage technology agency website suitable for a professional company selection assessment.
+
+The final website must demonstrate excellent frontend engineering, thoughtful visual design, advanced CSS techniques, polished interactions, responsive layouts, and maintainable code.
+
+The website should feel professionally art-directed and carefully engineered, not like a generic template or an obviously AI-generated website.
+
+The implementation must remain simple, lightweight, understandable, and deployable as a static website.
+
+The existing project folder structure is already established. Follow it exactly.
+
+---
+
+# 1. BRAND IDENTITY — MANDATORY
+
+Use the following branding consistently throughout the entire website.
+
+**Primary brand name:** APEX CIPHER
+
+**Official brand tagline:** A technology team by The Secure Script
+
+Display the brand name as:
+
+APEX CIPHER
+
+Display the tagline as:
+
+A technology team by The Secure Script
+
+Use APEX CIPHER as the primary visual identity. The Secure Script must appear as the secondary brand attribution through the specified tagline.
+
+Do not replace the brand name with NEXORA, VELTRIX, or any other invented company name.
+
+Create an original, sophisticated brand mark suitable for a modern technology and software engineering team.
+
+Use a geometric, abstract symbol inspired by precision, digital systems, connected structures, or secure engineering. Avoid obvious stock-style shield logos and overused generic cybersecurity imagery.
+
+The logo should work on dark backgrounds and remain recognizable at small sizes.
+
+Use the brand name, tagline, colors, logo treatment, and typography consistently on all pages.
+
+The footer must retain the APEX CIPHER identity and its tagline.
+
+Create a favicon and a separate SVG logo mark consistent with the main brand identity.
+
+Do not introduce alternative brand names or inconsistent taglines.
+
+---
+
+# 2. PROJECT OBJECTIVE
+
+Build a complete, visually impressive multipage website for APEX CIPHER, a technology team specializing in:
+
+- Artificial Intelligence and AI Consulting
+- Generative AI and AI Agents
+- Custom Software Development
+- Web Application Development
+- Cloud Engineering
+- Data Engineering and Analytics
+- Product Design and UI/UX
+- Quality Engineering
+- Digital Transformation
+
+The website is intended to demonstrate professional frontend skills to a company during a selection assessment.
+
+Prioritize visual quality, functional interfaces, responsive design, clean code, and an excellent first impression.
+
+Write professional, natural English copy. Avoid repetitive marketing phrases, vague slogans, exaggerated claims, and meaningless filler text.
+
+Do not invent real clients, testimonials, partnerships, awards, certifications, company statistics, or business results.
+
+Where project examples are hypothetical, clearly identify them as illustrative concepts.
+
+Do not build a backend, authentication system, database, admin dashboard, or server-dependent application.
+
+---
+
+# 3. STRICT TECHNOLOGY REQUIREMENTS
+
+Use exclusively:
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Native browser APIs
+- Inline SVG and local SVG files for icons and graphics
+
+Do not use:
+
+- React
+- Next.js
+- Vue
+- Angular
+- TypeScript
+- Tailwind CSS
+- Bootstrap
+- jQuery
+- Node.js
+- npm packages
+- Build tools
+- External JavaScript libraries
+- Required API keys
+- Backend frameworks
+- Databases
+- Server-side application code
+- External icon libraries
+
+The complete project must function as a static multipage website and be deployable directly to Netlify without a build command.
+
+Use maintainable frontend code and native browser capabilities.
+
+Do not add unnecessary technical complexity or dependencies.
+
+---
+
+# 4. PRESERVE THE EXISTING PROJECT STRUCTURE
+
+Use this exact project structure. Do not rename, merge, delete, or relocate existing files without explicit permission.
+
+APEX-CIPHER/
+│
+├── index.html
+├── about.html
+├── services.html
+├── ai-consulting.html
+├── software-development.html
+├── ai-solutions.html
+├── industries.html
+├── work.html
+├── case-study-ai-platform.html
+├── case-study-cloud-modernization.html
+├── insights.html
+├── article-enterprise-ai.html
+├── contact.html
+├── faq.html
+├── privacy-policy.html
+├── terms.html
+├── 404.html
+│
+├── netlify.toml
+├── README.md
+│
+├── docs/
+│   └── backend-integration.md
+│
+└── assets/
+    ├── css/
+    │   ├── tokens.css
+    │   ├── reset.css
+    │   ├── base.css
+    │   ├── layout.css
+    │   ├── components.css
+    │   ├── animations.css
+    │   ├── pages.css
+    │   └── responsive.css
+    │
+    ├── js/
+    │   ├── config.js
+    │   ├── api-client.js
+    │   ├── navigation.js
+    │   ├── animations.js
+    │   ├── cards.js
+    │   ├── filters.js
+    │   ├── faq.js
+    │   ├── forms.js
+    │   └── main.js
+    │
+    ├── icons/
+    │   ├── logo-mark.svg
+    │   └── favicon.svg
+    │
+    └── images/
+        ├── hero/
+        ├── projects/
+        ├── insights/
+        └── team/
+
+All HTML pages must use the correct paths for shared CSS, JavaScript, icons, and images.
+
+Do not reference unknown files, arbitrary URLs, or missing assets.
+
+Use CSS illustrations and inline SVG graphics whenever they are a better solution than requiring external image assets.
+
+Keep the code compatible with the planned folder structure from the beginning.
+
+---
+
+# 5. PREMIUM VISUAL DESIGN SYSTEM
+
+Create an original design system with a sophisticated futuristic technology aesthetic.
+
+The website must use gradients extensively but intentionally. Gradients should contribute to the visual identity rather than appear randomly on every element.
+
+Use a coherent palette built around:
+
+- Midnight navy
+- Near-black backgrounds
+- Electric blue
+- Vivid violet
+- Cyan highlights
+- White primary text
+- Muted grey supporting text
+- Subtle multicolor gradient accents
+
+Create rich gradient combinations for hero graphics, selected headline accents, card surfaces, background lighting, borders, decorative objects, and interactive states.
+
+Use atmospheric radial gradients, controlled glow effects, subtle transparency, carefully composed color transitions, and layered backgrounds.
+
+Keep the result visually rich while maintaining excellent readability and contrast.
+
+Use a consistent system font stack without requiring external font services.
+
+Create reusable CSS custom properties for:
+
+- Color tokens
+- Gradient tokens
+- Typography
+- Spacing
+- Layout widths
+- Border treatments
+- Shadows
+- Glow effects
+- Corner radii
+- Z-index layers
+- Transition timing
+- Animation easing
+- Responsive breakpoints
+
+Place these tokens in `assets/css/tokens.css`.
+
+Use deliberate spacing and typography. Avoid inconsistent dimensions and randomly selected CSS values.
+
+Do not make every section visually identical. Use different compositions, grids, alignments, and section treatments while preserving the same visual identity.
+
+The website must look premium, modern, cohesive, and commercially credible.
+
+---
+
+# 6. ADVANCED HERO SECTION
+
+The homepage hero must be one of the strongest visual experiences on the website.
+
+Build a visually distinctive first viewport that combines strong typography, premium composition, meaningful content, and custom graphical elements.
+
+Include:
+
+- Refined responsive navigation
+- Custom APEX CIPHER branding
+- The exact brand tagline
+- A powerful headline
+- Concise supporting content
+- A primary CTA
+- A secondary CTA
+- A custom animated visual
+- Rich gradient lighting
+- Layered depth
+- Clear visual hierarchy
+- Excellent responsive behavior
+
+The headline must be carefully composed with intentional line breaks, appropriate font size, strong contrast, and controlled gradient accents.
+
+Create a custom 3D-inspired hero visual using CSS perspective, transforms, pseudo-elements, SVG, and layered graphics.
+
+Possible design elements include:
+
+- Abstract orbital structures
+- A luminous digital sphere
+- Floating interface panels
+- Connected-node visualizations
+- Architectural geometric shapes
+- Layered futuristic dashboard fragments
+- Animated rings and controlled light effects
+
+Choose a coherent visual concept rather than combining unrelated effects.
+
+Use depth, scale, perspective, lighting, opacity, and motion to create a convincing impression of three-dimensional design.
+
+Do not depend on a generic illustration as the entire hero visual.
+
+Keep the primary CTA clearly visible and the supporting content easy to read.
+
+Ensure that the design does not break on small screens.
+
+The hero must look impressive without requiring WebGL, three.js, external animation libraries, or other heavy dependencies.
+
+---
+
+# 7. ADVANCED GRADIENT GRAPHICS AND VISUALIZATIONS
+
+Create custom technical visuals that reinforce the brand's focus on AI, software engineering, digital systems, and modern technology.
+
+Suitable visual treatments include:
+
+- Connected-node network graphics
+- Abstract AI architecture diagrams
+- Animated orbital systems
+- Data-flow illustrations
+- Dashboard-style UI fragments
+- SVG line graphics
+- Gradient meshes
+- Luminous geometric structures
+- Process diagrams
+- Conceptual analytics visualizations
+- Layered interface panels
+
+Create these visuals using CSS, pseudo-elements, and SVG wherever practical.
+
+Use consistent stroke widths, spacing, geometry, and lighting across visual assets.
+
+Any charts or analytics interfaces must be clearly conceptual demonstrations. Do not imply that invented data represents actual company performance.
+
+Use no emoji characters in any design element, website text, buttons, navigation, code comments, or decorative content.
+
+Use proper SVG icons instead of emojis.
+
+Do not substitute random Unicode characters for real icons.
+
+---
+
+# 8. PROFESSIONAL CARDS AND ADVANCED GRID LAYOUTS
+
+Create a collection of reusable, carefully designed components:
+
+- Service cards
+- Featured capability cards
+- Asymmetric bento grids
+- Portfolio cards
+- Project showcase cards
+- Industry cards
+- Article cards
+- Process cards
+- Technology panels
+- Editorial feature blocks
+- CTA panels
+
+Each component must have a clear purpose, proper alignment, balanced spacing, readable typography, and meaningful content.
+
+Use combinations of gradient surfaces, restrained glow effects, subtle borders, depth, high-quality iconography, and responsive layouts.
+
+Include selected effects such as:
+
+- Subtle perspective tilt
+- Controlled elevation
+- Gradient border transitions
+- Background lighting changes
+- Smooth icon movement
+- Refined hover transitions
+- Layered depth
+- Keyboard focus states
+
+Use animations selectively. Do not apply every visual effect to every card.
+
+Avoid monotonous layouts, excessive rounded rectangles, huge collections of identical cards, and unnecessary decorative elements.
+
+Cards must work well with mouse, touch, and keyboard interaction.
+
+Reuse appropriate components and CSS classes to maintain consistency.
+
+---
+
+# 9. ICON SYSTEM — NO EMOJIS
+
+This is a strict requirement.
+
+Never use emojis anywhere in the website.
+
+All iconography must use appropriate icons rather than emoji characters.
+
+Use:
+
+- Inline SVG
+- Local SVG assets
+- A reusable custom SVG icon system where appropriate
+
+Maintain consistent icon dimensions, stroke widths, line caps, and visual weight.
+
+Use icons for services, navigation, project links, capabilities, feature lists, utility actions, social links where appropriate, and interface controls.
+
+Icons must look professional and match the APEX CIPHER brand.
+
+Decorative SVG graphics must not interfere with accessibility. Use appropriate accessibility attributes or mark purely decorative SVGs as hidden from assistive technology.
+
+Do not use emoji placeholders, generic text symbols, or random Unicode glyphs as substitutes for icons.
+
+Do not introduce icon fonts, external icon packages, or third-party JavaScript libraries.
+
+---
+
+# 10. ANIMATIONS AND MICRO-INTERACTIONS
+
+Use CSS3 and Vanilla JavaScript to create polished, lightweight interactions.
+
+Include suitable effects such as:
+
+- Animated hero geometry
+- Floating visual elements
+- Controlled 3D transforms
+- Scroll-triggered reveals
+- Subtle pointer-responsive lighting
+- Selected card tilt effects
+- Background motion
+- Button hover states
+- Smooth mobile navigation
+- FAQ accordion transitions
+- Working portfolio filters where suitable
+- Refined focus and active states
+
+Use IntersectionObserver for reveal effects where appropriate.
+
+Use efficient event handling for mouse interactions and avoid unnecessarily expensive animation loops.
+
+Respect the user's `prefers-reduced-motion` setting.
+
+Reduce unnecessary motion on smaller screens when doing so improves usability or performance.
+
+Do not hide essential content permanently if JavaScript fails.
+
+Do not create flickering animations, unnecessary layout shifts, broken transitions, or interactions that interfere with text readability.
+
+Animations must feel intentional and professionally tuned.
+
+---
+
+# 11. COMPLETE HOMEPAGE
+
+Create the homepage in `index.html`.
+
+Use a well-designed sequence of sections that communicates brand identity, technical capability, quality, and professional value.
+
+Include:
+
+1. Premium navigation
+2. Advanced hero
+3. Capabilities or positioning strip
+4. Services overview
+5. Featured work or illustrative projects
+6. Delivery approach and process
+7. Differentiators and working principles
+8. Technology and innovation showcase
+9. Industry or solution highlights
+10. Frequently asked questions
+11. Final project inquiry CTA
+12. Complete footer
+
+Choose the strongest layout for each section.
+
+Use different visual structures rather than repeating the same card layout throughout the page.
+
+Make the navigation consistent and the primary project inquiry action easy to find.
+
+Do not add fabricated trust indicators, client logos, awards, or results.
+
+The homepage should tell a coherent story from introduction to capabilities, work, process, and contact.
+
+---
+
+# 12. INDIVIDUAL PAGE REQUIREMENTS
+
+Implement every HTML page in the supplied project structure.
+
+## about.html
+
+Present the APEX CIPHER brand story, mission, values, working philosophy, and approach.
+
+Use the exact brand tagline in appropriate brand contexts.
+
+Do not fabricate company history, team identities, or achievements.
+
+## services.html
+
+Present the complete service overview using professional, visually varied layouts.
+
+Link to the corresponding individual service pages.
+
+## ai-consulting.html
+
+Cover AI strategy, opportunity assessment, readiness, implementation planning, and responsible AI practices.
+
+## software-development.html
+
+Cover custom software, web applications, product engineering, software quality, and maintainable delivery.
+
+## ai-solutions.html
+
+Cover generative AI, AI agents, intelligent workflows, and suitable business applications.
+
+## industries.html
+
+Show relevant industry challenges alongside potential technology solutions.
+
+## work.html
+
+Create a premium portfolio with meaningful project summaries and working category filters where appropriate.
+
+## case-study-ai-platform.html
+
+Create an illustrative AI platform case study with context, problem, approach, conceptual solution, and implementation considerations.
+
+## case-study-cloud-modernization.html
+
+Create an illustrative cloud modernization case study using a structured editorial layout and relevant technical visuals.
+
+Clearly identify fictional or demonstration projects as illustrative concepts.
+
+Never invent real clients, testimonials, certifications, or achieved business results.
+
+## insights.html
+
+Create a polished editorial-style resource hub with categories, article previews, and working filters where appropriate.
+
+## article-enterprise-ai.html
+
+Create a long-form article layout with readable text width, a clear heading hierarchy, introduction, main content, and related content links.
+
+## contact.html
+
+Create a polished contact experience with accessible labels, sensible field types, client-side validation, and clear feedback.
+
+Because this is a static frontend demonstration, clearly state that form submission is demonstrative and that messages are not actually transmitted or stored.
+
+Never pretend that a message has been sent successfully when no submission occurred.
+
+Do not make unnecessary network requests.
+
+## faq.html
+
+Create accessible FAQ accordion components with working open and close behavior.
+
+## privacy-policy.html
+
+Provide an editable privacy policy template with clearly identifiable business-specific placeholders.
+
+## terms.html
+
+Provide an editable terms template with clearly identifiable placeholders.
+
+Do not represent legal templates as reviewed or approved legal documents.
+
+## 404.html
+
+Create a custom branded not-found page with a working route back to the homepage.
+
+Every HTML page must have an appropriate title, meta description, viewport declaration, consistent navigation, footer, and correct asset references.
+
+---
+
+# 13. NAVIGATION AND FUNCTIONAL INTERACTIONS
+
+All visible interactive elements must perform their stated action.
+
+Requirements:
+
+- The logo links to the homepage.
+- Internal navigation links point to existing pages.
+- The mobile menu opens and closes correctly.
+- Navigation controls support keyboard interaction.
+- Buttons use appropriate HTML elements.
+- Cards link to meaningful destinations when applicable.
+- FAQ accordion controls work correctly.
+- Filters work when present.
+- Contact fields can be edited and validated.
+- Hover effects do not replace visible keyboard focus.
+- There are no dead links or arbitrary placeholder destinations.
+- There are no broken images or missing visual assets.
+- JavaScript must handle pages without a particular component.
+- Controls must not pretend to perform server-dependent operations.
+
+Use semantic HTML and valid relative paths for all local pages and assets.
+
+Keep navigation behavior consistent throughout the project.
+
+---
+
+# 14. SHARED CSS ARCHITECTURE
+
+Keep the CSS files separate and use them for their intended responsibilities.
+
+`assets/css/tokens.css`
+
+Define colors, gradients, design tokens, spacing, typography, shadows, and reusable visual values.
+
+`assets/css/reset.css`
+
+Create consistent baseline browser styling.
+
+`assets/css/base.css`
+
+Define typography, body styles, links, images, and global element defaults.
+
+`assets/css/layout.css`
+
+Define containers, grids, reusable layouts, section spacing, and layout utilities.
+
+`assets/css/components.css`
+
+Define reusable navigation, buttons, cards, forms, badges where suitable, icons, and interactive components.
+
+`assets/css/animations.css`
+
+Define keyframes, transitions, 3D effects, motion utilities, and animation behavior.
+
+`assets/css/pages.css`
+
+Define page-specific visual treatments without unnecessarily duplicating shared components.
+
+`assets/css/responsive.css`
+
+Define responsive layouts, typography adjustments, mobile navigation support, and smaller-screen behavior.
+
+Use consistent class naming and reuse CSS variables.
+
+Avoid conflicting selectors, unexplained magic values, duplicated rules, excessive specificity, and unnecessary inline styling.
+
+Load stylesheets in a consistent order that respects dependencies.
+
+---
+
+# 15. SHARED JAVASCRIPT ARCHITECTURE
+
+Use the JavaScript files according to their intended responsibilities.
+
+`assets/js/config.js`
+
+Store only simple frontend configuration values.
+
+`assets/js/api-client.js`
+
+Reserve this file for future API integration. It must not make network requests in the current static project.
+
+`assets/js/navigation.js`
+
+Implement accessible navigation and mobile menu behavior.
+
+`assets/js/animations.js`
+
+Implement shared scroll reveals and other general motion effects.
+
+`assets/js/cards.js`
+
+Implement selected card interactions where appropriate.
+
+`assets/js/filters.js`
+
+Implement working client-side filters where they are needed.
+
+`assets/js/faq.js`
+
+Implement accessible accordion interactions.
+
+`assets/js/forms.js`
+
+Implement client-side form validation and honest demonstration feedback.
+
+`assets/js/main.js`
+
+Initialize shared functionality safely and coordinate modules when necessary.
+
+Avoid unnecessary global variables, duplicated initialization, and repeated event listeners.
+
+Scripts must not throw errors simply because a page does not contain a component that another page uses.
+
+Use explicit, consistent element selectors and function names across the project.
+
+Keep JavaScript understandable and proportionate to the task.
+
+---
+
+# 16. NO BACKEND — STATIC FRONTEND ONLY
+
+This project is strictly a frontend demonstration.
+
+Do not implement:
+
+- Authentication
+- Login or registration
+- Database connections
+- Admin dashboards
+- Server-side operations
+- Live API data
+- Fake API responses
+- Server-dependent functionality
+- Persistent form submissions
+
+Do not simulate a real backend by displaying fake success messages or inventing server responses.
+
+Use client-side validation and honest demo feedback only.
+
+The project may include a simple configuration file, an unused API integration helper, and documentation explaining possible future integration points. These must not introduce unnecessary complexity.
+
+Do not expose secrets, credentials, or private keys in client-side files.
+
+---
+
+# 17. RESPONSIVENESS AND ACCESSIBILITY
+
+The design must work across:
+
+- Large desktop screens
+- Standard desktop screens
+- Tablets
+- Mobile phones
+- Narrow mobile screens
+
+Use CSS Grid, Flexbox, fluid dimensions, responsive type scaling, and suitable breakpoints.
+
+Prevent unintended horizontal scrolling, broken grids, clipped headlines, text collisions, overflowing cards, and overlapping visual effects.
+
+Ensure that:
+
+- Navigation works on mobile.
+- Buttons remain accessible.
+- Forms remain usable.
+- Contrast is sufficient.
+- Images and graphics scale appropriately.
+- Interactive controls have visible focus styles.
+- Accordions expose their state accessibly.
+- Keyboard interaction is supported.
+- Decorative SVGs do not create accessibility noise.
+- Reduced-motion preferences are respected.
+
+Do not sacrifice usability or responsiveness for visual effects.
+
+---
+
+# 18. CODE QUALITY AND ERROR PREVENTION
+
+Write complete, valid, maintainable source code for every file.
+
+Before generating each file, carefully review it for foreseeable errors.
+
+Check for:
+
+- Invalid HTML
+- Incorrect CSS syntax
+- JavaScript syntax errors
+- Undefined function calls
+- Duplicate IDs
+- Invalid attributes
+- Incorrect file paths
+- Broken navigation links
+- Missing closing tags
+- Mismatched CSS classes
+- Inconsistent IDs and selectors
+- Unhandled missing elements
+- Duplicate event listeners
+- Broken responsive behavior
+- Missing assets
+- Unnecessary external dependencies
+- Dead buttons and placeholder links
+- Conflicting design tokens
+
+Maintain consistency across all generated files.
+
+Do not rename functions, selectors, paths, or class names in later files without updating their dependencies appropriately.
+
+Use meaningful names and comments only where they improve maintainability.
+
+Do not claim that the website has been tested in an actual browser unless browser testing has occurred.
+
+Aim to prevent foreseeable bugs through careful review, while acknowledging that actual runtime verification requires testing.
+
+---
+
+# 19. NETLIFY DEPLOYMENT REQUIREMENTS
+
+Keep the project compatible with direct static deployment.
+
+Requirements:
+
+- `index.html` must remain at the project root.
+- Correct relative paths must be used.
+- No build command should be required.
+- Node.js must not be required.
+- No server-side application should be required.
+- Internal navigation must function after deployment.
+- `netlify.toml` must use only appropriate static-hosting configuration.
+- `README.md` must include clear deployment instructions.
+- The custom 404 page must work with the static hosting setup.
+
+Do not introduce unnecessary redirects or configuration rules that break navigation.
+
+Do not claim that the form sends messages to a server.
+
+---
+
+# 20. STRICT ONE-FILE-PER-RESPONSE WORKFLOW
+
+This requirement is mandatory and must be followed exactly.
+
+Generate only ONE complete file per response.
+
+For every response, use this exact format:
+
+**FILE NAME:**
+Provide the exact filename.
+
+**FILE PURPOSE:**
+Explain briefly what the file does.
+
+**FILE LOCATION:**
+Provide the exact location inside the APEX-CIPHER project.
+
+**COMPLETE FILE CONTENT:**
+Provide one complete code block containing the entire source of that file.
+
+Rules:
+
+1. Generate exactly one file in every response.
+2. Never generate two files in the same response.
+3. Never combine HTML, CSS, JavaScript, SVG, or configuration files into one file.
+4. Never omit code sections or use phrases such as "same as above", "rest of the code", or "continue here".
+5. Always provide complete source code for the current file.
+6. Never regenerate a previous file unless explicitly requested.
+7. Preserve the established folder structure.
+8. Maintain consistency with every previously generated file.
+9. Do not ask unnecessary clarification questions.
+10. Never use emojis in the generated website, source code, copy, buttons, or comments.
+11. Use proper SVG icons instead of emojis.
+12. Stop immediately after completing the current file.
+13. Wait for my exact message: `NEXT FILE`.
+14. Generate the next file only when I send `NEXT FILE`.
+
+Keep track of the planned files and their dependencies internally.
+
+Do not include the source code of additional files even if the current file refers to them.
+
+---
+
+# 21. FILE GENERATION ORDER
+
+The folder structure has already been established.
+
+Do not print the folder structure again.
+
+Do not begin by explaining the project or listing its requirements.
+
+Generate the files in this order, one per response:
+
+1. `index.html`
+2. `assets/css/tokens.css`
+3. `assets/css/reset.css`
+4. `assets/css/base.css`
+5. `assets/css/layout.css`
+6. `assets/css/components.css`
+7. `assets/css/animations.css`
+8. `assets/css/pages.css`
+9. `assets/css/responsive.css`
+10. `assets/js/config.js`
+11. `assets/js/api-client.js`
+12. `assets/js/navigation.js`
+13. `assets/js/animations.js`
+14. `assets/js/cards.js`
+15. `assets/js/filters.js`
+16. `assets/js/faq.js`
+17. `assets/js/forms.js`
+18. `assets/js/main.js`
+19. `assets/icons/logo-mark.svg`
+20. `assets/icons/favicon.svg`
+21. `about.html`
+22. `services.html`
+23. `ai-consulting.html`
+24. `software-development.html`
+25. `ai-solutions.html`
+26. `industries.html`
+27. `work.html`
+28. `case-study-ai-platform.html`
+29. `case-study-cloud-modernization.html`
+30. `insights.html`
+31. `article-enterprise-ai.html`
+32. `contact.html`
+33. `faq.html`
+34. `privacy-policy.html`
+35. `terms.html`
+36. `404.html`
+37. `netlify.toml`
+38. `README.md`
+39. `docs/backend-integration.md`
+
+When generating each HTML page, use the established shared stylesheets and JavaScript references.
+
+When generating a local SVG asset, ensure its content is valid SVG and its dimensions and colors match the design system.
+
+Maintain working internal links and consistent brand identity across all pages.
+
+After each response, stop and wait for `NEXT FILE`.
+
+---
+
+# 22. FIRST RESPONSE — GENERATE INDEX.HTML ONLY
+
+Start now.
+
+**FILE NAME:** `index.html`
+
+**FILE PURPOSE:** The main APEX CIPHER homepage, including branded navigation, advanced hero, principal content sections, calls to action, and complete footer.
+
+**FILE LOCATION:** `APEX-CIPHER/index.html`
+
+Generate the complete HTML5 document only.
+
+Use the correct planned relative paths for the shared CSS files, JavaScript files, and favicon. Their contents will be generated in later responses.
+
+Use the APEX CIPHER brand name and the exact tagline:
+
+A technology team by The Secure Script
+
+Use semantic HTML, professional English copy, appropriate SVG icon markup, and a carefully composed homepage structure.
+
+Do not use any emoji characters.
+
+Do not generate CSS, JavaScript, SVG files, other HTML pages, or additional files in this response.
+
+After delivering the complete `index.html`, stop and wait for my message:
+
+NEXT FILE
+
+# FINAL QUALITY STANDARD
+
+The completed website must feel like a sophisticated, premium enterprise technology experience with a coherent APEX CIPHER identity.
+
+Prioritize excellent typography, sophisticated gradients, strong hero composition, advanced 3D-inspired graphics, premium cards, professional iconography, clean spacing, responsive layouts, functional interactions, accessibility, and maintainable code.
+
+Keep the implementation lightweight, static, understandable, and appropriate for a company frontend assessment.
+
+Start with `index.html` only. Follow the one-file-per-response rule without exceptions.

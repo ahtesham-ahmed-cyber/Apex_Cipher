@@ -1,0 +1,94 @@
+APEX CIPHER — ADVANCED WEBSITE REDESIGN & QA MASTER PROMPT
+
+ROLE
+Act as a senior UI/UX designer, frontend engineer, accessibility specialist, and QA engineer. Work on the EXISTING APEX CIPHER website contained in this project. The goal is a complete, production-quality visual redesign inspired by the interaction patterns, information architecture, mega-menus, cards, and polished corporate presentation of https://10pearls.com/ — do NOT copy their branding, text, assets, or exact layouts. Keep APEX CIPHER / The Secure Script identity and the existing project content.
+
+MANDATORY WORKFLOW
+1. Audit the entire repository first: every HTML page, CSS file, JS module, asset reference, navigation link, form, filter, card interaction, responsive breakpoint, and accessibility behavior.
+2. Produce a concise issue inventory with severity (critical/high/medium/low), file/path, evidence, and proposed fix. Compare every page, not just the homepage.
+3. Then implement the approved redesign directly in the existing project. Preserve current useful functionality and URLs. Do not replace the project with a single mockup or rewrite unrelated functionality.
+4. Run QA after implementation. Fix discovered regressions before declaring completion. Do not claim tests were run unless they actually were.
+5. Deliver the updated project as a ZIP, plus a change log, QA report, and a copy of this prompt. Keep the original source untouched or include a clear backup.
+
+DESIGN DIRECTION
+- Complete light/white corporate theme across ALL pages: white and soft neutral backgrounds, dark readable typography, thin subtle borders, generous whitespace, polished shadows.
+- Accent palette: restrained violet/indigo, blue, and cyan gradients. Gradients should appear as attractive soft glow/radial highlights behind cards and on hover, not as heavy dark backgrounds or loud full-screen color washes.
+- Futuristic, premium, animated, interactive, clear and accessible. Keep APEX CIPHER's logo, naming, voice, and project content.
+- Use a consistent spacing scale, typography scale, border radius, shadows, content width, and focus state across the site. Avoid arbitrary per-page styles and avoid horizontal overflow.
+- Preserve semantic HTML and existing page content unless a content correction is needed. Do not invent customer claims, client logos, testimonials, metrics, or project results.
+
+GLOBAL HEADER / NAVIGATION
+- White sticky header with logo/brand on the left and clearly spaced primary navigation.
+- Include Company, AI & Intelligence, Services, Platforms, Industries, Work, Insights, Search, and a prominent Contact action, mapped to existing pages and useful related pages.
+- On desktop, hovering or keyboard-focusing a top-level item opens a well-designed mega-menu containing relevant grouped links and short context descriptions. The menu should align with the header, have a clear visual hierarchy, generous spacing, light surface, subtle border/shadow, and violet/blue accent headings. Avoid clipped menus and menus that close when the pointer moves from trigger to panel.
+- Support click as well as hover; use proper aria-expanded/aria-controls, Escape-to-close, outside-click handling, visible focus, and sensible focus order.
+- Search button opens a functional search overlay/panel with input, close action, Enter support, Escape support, and useful results across the site's pages/content. Do not leave decorative controls inert. If a true full-text index is not available in a static site, implement a robust client-side index of the known page titles, descriptions, and navigation links.
+- Mobile/tablet: use a clear menu toggle and accessible drawer/accordion navigation. No hover-only interaction on touch devices. Lock body scroll while the drawer is open, close after navigation, support Escape, and keep the Contact action reachable.
+- Active page/section must be indicated without making the header crowded. Header must not obscure anchor targets.
+
+HOMEPAGE / HERO
+- Redesign the homepage hero to be clear, confident, and premium: concise value proposition, readable supporting copy, primary Contact CTA and secondary Work/Services CTA, plus tasteful technology visual/abstract orbital visual where it already exists.
+- Preserve content hierarchy and avoid oversized text that causes clipping at narrow widths. Ensure buttons wrap/stack appropriately on mobile.
+- Add refined entrance/reveal and background gradient motion, but never make content dependent on animation. Respect prefers-reduced-motion.
+- Improve the following homepage sections for rhythm, consistent spacing, card hierarchy, calls to action, and readability. Keep existing useful content and links.
+
+WORK / PORTFOLIO / CASE STUDIES
+- Rework work.html cards into a deliberate staggered/layered editorial portfolio arrangement: cards can sit at slightly different vertical offsets or overlap only in a controlled, responsive way. Every card must remain readable and reachable; no title, description, image, tag, or link may be hidden behind another card.
+- On hover/focus, the active card rises subtly above neighboring cards, gets a refined violet-to-blue/cyan glow or gradient edge, and remains fully legible. Other cards may soften slightly, but never blur/hide essential content or reduce contrast below accessibility needs.
+- Use consistent image aspect ratios, object-fit: cover, well-balanced text, clear category labels, descriptions, tags, and visible Read more/details actions. Avoid narrow columns that force every word onto a new line.
+- Responsive behavior: desktop 3-column or editorial layout as suitable; tablet 2 columns; phone 1 column with no overlap. Turn off stagger/overlap on narrow screens and when reduced motion is requested. Make hover effects available through keyboard focus too.
+- Preserve existing filtering/category controls and ensure they continue to work after layout changes.
+
+CARDS / COMPONENTS / HOVER EFFECTS
+- Apply the shared design system consistently to service cards, industry cards, insight/article cards, value cards, FAQ, process steps, CTA panels, forms, and case-study cards.
+- Add restrained gradient halos behind/on hover for cards. Use ::before/::after only where layering does not block pointer events (pointer-events:none); maintain proper z-index and isolation.
+- Transitions should be short and smooth (roughly 180–350ms). Avoid extreme 3D tilt, constant distracting motion, huge shadows, or hover transforms that cause layout jumps.
+- Hover, focus-visible, active, disabled, and loading states must be distinguishable. Interactive elements should have pointer cursors and accessible labels.
+
+BACK BUTTON / FOOTER / PAGE SPACING
+- Fix the floating Back button (.page-back / .btn-back) because it currently overlaps footer text/content in screenshots. Reposition it to a safe corner with viewport-safe spacing, proper z-index and contrast, and ensure it never obscures important content or fixed cookie notices. Consider a less intrusive sticky/inline option if that is safer on small screens.
+- On phones, account for safe-area insets and leave adequate bottom spacing. Ensure the final footer content and legal/copyright row are visible and not covered by floating UI.
+- Redesign the footer in a polished multi-column corporate style: brand/short description, Company, Services, Resources, Legal, relevant internal links, contact CTA, and Back to top. Use existing real project links; do not invent contact details or social accounts. Collapse columns gracefully on mobile.
+- Keep all footer links readable, focusable, and functional. Back-to-top should work and respect reduced motion.
+
+RESPONSIVE / ACCESSIBILITY
+- Test at minimum widths: 320px, 360px, 390px, 412px, 768px, 1024px, 1280px, and 1440px.
+- No horizontal page overflow, clipped text, overlapping cards, inaccessible menus, hidden buttons, broken image ratios, or footer collisions.
+- Ensure contrast, semantic landmarks, meaningful alt text, form labels, keyboard navigation, visible focus, correct ARIA state, and reduced-motion support.
+- Do not use hover as the only way to access content. Keep text selectable and avoid using blur on essential text.
+- Check that sticky headers, dropdowns, search panels, modals, and floating buttons have correct stacking contexts and do not trap users.
+
+FUNCTIONALITY / TECHNICAL QA
+- Inspect and repair invalid or suspicious stylesheet/script references (including the current external stylesheet reference that appears to point to cloudflare.com with an integrity attribute rather than a real CSS asset). Only include legitimate dependencies actually needed by the project; prefer local assets where possible.
+- Verify all local CSS, JS, images, icons, fonts, and page links resolve. No broken asset paths or accidental file:// assumptions.
+- Preserve existing filters, accordions, FAQ, forms, animation/reveal logic, active navigation, search, menu interactions, and internal links. Buttons must perform their stated actions.
+- Validate HTML structure, CSS syntax, JS console errors where a browser is available, keyboard-only navigation, touch navigation, and reduced-motion mode.
+- If the project is static, ensure it runs correctly through a local HTTP server and explain the correct run instructions. Do not imply that backend submissions work unless configured; document any API/backend integration dependency clearly.
+- Check all pages: index.html, about.html, services.html, ai-consulting.html, ai-solutions.html, software-development.html, industries.html, work.html, insights.html, article-enterprise-ai.html, case-study-ai-platform.html, case-study-cloud-modernization.html, contact.html, faq.html, privacy-policy.html, terms.html, and 404.html.
+
+IMPLEMENTATION RULES
+- Reuse the current CSS architecture/tokens and existing JS modules where practical. Prefer maintainable shared tokens and component rules over scattered overrides.
+- Do not remove content, pages, existing useful functionality, assets, or links just to make the redesign easier.
+- Avoid adding large dependencies unless necessary. Avoid hard-coded heights that cut off text. Use min-width:0, minmax(0,1fr), responsive clamp(), and appropriate overflow behavior where helpful.
+- Ensure decorative gradients do not cover text and use pointer-events:none for decorative layers.
+- Preserve branding and responsive performance. Optimize animations and avoid expensive continuous effects on mobile.
+
+FINAL DELIVERABLES
+1. Updated complete project ZIP with all pages/assets intact.
+2. CHANGELOG.md listing files changed and what changed.
+3. QA_REPORT.md with issues found, fixes applied, viewport checks actually performed, test results, and known limitations.
+4. This prompt saved in the project as APEX_CIPHER_ADVANCED_UPDATE_PROMPT.txt.
+5. Short README instructions for running the website locally.
+6. Final summary separating completed items from anything not tested or requiring backend configuration.
+
+ACCEPTANCE CRITERIA
+- Light/white theme is consistent throughout the website.
+- Desktop mega-menus work by hover, focus, and click; mobile navigation works by touch and keyboard.
+- Search and Contact controls are functional, not decorative.
+- Back button no longer covers footer or page content.
+- Portfolio cards have polished staggered/layered presentation and attractive accessible gradient hover/focus states without hiding content.
+- Responsive layout works at all listed widths without horizontal overflow or collisions.
+- Existing pages, content, filters, forms, links, and assets are preserved and verified.
+- QA report is honest and lists any unverified behavior.
+
+Begin with the audit, record evidence, then implement and test. Do not stop after making only a visual mockup.

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 40 40"
+     width="40"
+     height="40"
+     role="img"
+     aria-labelledby="apexCipherLogoTitle apexCipherLogoDesc">
+
+  <title id="apexCipherLogoTitle">APEX CIPHER</title>
+  <desc id="apexCipherLogoDesc">A technology team by The Secure Script.</desc>
+
+  <defs>
+    <linearGradient id="apexCipherMarkStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4da3ff"/>
+      <stop offset="0.52" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+
+    <linearGradient id="apexCipherMarkInner" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8dc2ff"/>
+      <stop offset="0.55" stop-color="#a894ff"/>
+      <stop offset="1" stop-color="#7ce8f7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer hexagonal frame: precision and containment. -->
+  <path d="M20 3.5 34.5 11.8v16.4L20 36.5 5.5 28.2V11.8Z"
+        fill="none"
+        stroke="url(#apexCipherMarkStroke)"
+        stroke-width="1.6"
+        stroke-linejoin="round"
+        stroke-linecap="round"/>
+
+  <!-- Inner structural frame, offset slightly to suggest depth. -->
+  <path d="M20 7.4 31.2 13.7v13L20 32.9 8.8 26.7v-13Z"
+        fill="none"
+        stroke="url(#apexCipherMarkStroke)"
+        stroke-width="0.7"
+        stroke-linejoin="round"
+        opacity="0.45"/>
+
+  <!-- Cipher peak: the "A" form that gives the mark its identity. -->
+  <path d="M13.2 26.4 20 12.6l6.8 13.8"
+        fill="none"
+        stroke="url(#apexCipherMarkInner)"
+        stroke-width="2.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Crossbar tying the peak to the frame. -->
+  <path d="M15.7 22.1h8.6"
+        fill="none"
+        stroke="url(#apexCipherMarkInner)"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        opacity="0.85"/>
+
+  <!-- Node at the base: the connected endpoint of the system. -->
+  <circle cx="20" cy="30.6" r="1.9" fill="#22d3ee"/>
+  <circle cx="20" cy="30.6" r="4.1"
+          fill="none"
+          stroke="#22d3ee"
+          stroke-width="0.7"
+          opacity="0.35"/>
+
+</svg>

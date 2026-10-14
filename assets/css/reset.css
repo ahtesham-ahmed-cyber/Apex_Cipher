@@ -1,0 +1,278 @@
+/* ============================================================
+ *  APEX CIPHER — Reset
+ *  A modern, opinionated baseline that removes inconsistent
+ *  browser defaults while preserving accessibility semantics.
+ *  ============================================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + var(--space-md));
+    hanging-punctuation: first last;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+    text-wrap: pretty;
+}
+
+ol[role="list"],
+ul[role="list"] {
+    list-style: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+img,
+video {
+    height: auto;
+}
+
+svg {
+    fill: currentColor;
+}
+
+/* Recover a sensible default for inline SVG iconography that
+ *  relies on stroke rather than fill. Individual components
+ *  override fill explicitly where required. */
+svg[fill="none"] {
+    fill: none;
+}
+
+button,
+input,
+select,
+textarea,
+optgroup {
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    text-align: inherit;
+}
+
+button:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled {
+    cursor: not-allowed;
+}
+
+input,
+textarea,
+select {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 6rem;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+legend {
+    padding: 0;
+}
+
+hr {
+    border: 0;
+    border-top: var(--border-hairline);
+    height: 0;
+    margin: 0;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+    content: none;
+}
+
+address {
+    font-style: normal;
+}
+
+code,
+kbd,
+samp,
+pre {
+    font-family: var(--font-mono);
+    font-size: 1em;
+}
+
+pre {
+    overflow: auto;
+    white-space: pre;
+}
+
+strong,
+b {
+    font-weight: var(--fw-bold);
+}
+
+small {
+    font-size: var(--fs-xs);
+}
+
+sub,
+sup {
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+abbr[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Respect users who prefer reduced motion before any component
+ *  stylesheet adds transitions or animations. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}

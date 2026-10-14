@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     width="32"
+     height="32"
+     role="img"
+     aria-label="APEX CIPHER">
+
+  <defs>
+    <linearGradient id="apexCipherFaviconStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4da3ff"/>
+      <stop offset="0.52" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+
+    <linearGradient id="apexCipherFaviconPeak" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8dc2ff"/>
+      <stop offset="0.55" stop-color="#a894ff"/>
+      <stop offset="1" stop-color="#7ce8f7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark rounded background so the mark reads on light and
+       dark browser chrome alike. -->
+  <rect x="0" y="0" width="32" height="32" rx="7" ry="7" fill="#05070f"/>
+
+  <!-- Subtle inner highlight to lift the surface. -->
+  <rect x="0.5" y="0.5" width="31" height="31" rx="6.5" ry="6.5"
+        fill="none"
+        stroke="rgba(255, 255, 255, 0.06)"
+        stroke-width="1"/>
+
+  <!-- Hexagonal frame. -->
+  <path d="M16 3.4 27.4 10v13L16 29.6 4.6 23V10Z"
+        fill="none"
+        stroke="url(#apexCipherFaviconStroke)"
+        stroke-width="1.7"
+        stroke-linejoin="round"
+        stroke-linecap="round"/>
+
+  <!-- Cipher peak. -->
+  <path d="M11.4 21.6 16 10.8l4.6 10.8"
+        fill="none"
+        stroke="url(#apexCipherFaviconPeak)"
+        stroke-width="2.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Base node. -->
+  <circle cx="16" cy="24.4" r="1.6" fill="#22d3ee"/>
+
+</svg>

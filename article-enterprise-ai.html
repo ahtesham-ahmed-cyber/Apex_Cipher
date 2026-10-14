@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enterprise AI: what changes when the system has to be depended on | APEX CIPHER</title>
+  <meta name="description" content="A long-form engineering note on the gap between a working AI prototype and a system a regulated team can rely on — evaluation, oversight, traceability, and why the model choice matters least.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/accordion.css">
+  <link rel="stylesheet" href="assets/css/theme-refresh.css">
+</head>
+
+<body class="page page--article">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================================================
+       Site header
+       ============================================================ -->
+  <header class="site-header" data-site-header>
+    <div class="container site-header__inner">
+
+      <a class="brand" href="index.html" aria-label="APEX CIPHER, home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="40" height="40" role="presentation" focusable="false">
+            <defs>
+              <linearGradient id="brandMarkGradientArticle" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#4da3ff"></stop>
+                <stop offset="0.52" stop-color="#7c5cff"></stop>
+                <stop offset="1" stop-color="#22d3ee"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M20 3.5 34.5 11.8v16.4L20 36.5 5.5 28.2V11.8Z"
+                  fill="none" stroke="url(#brandMarkGradientArticle)" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M13.2 26.4 20 12.6l6.8 13.8"
+                  fill="none" stroke="url(#brandMarkGradientArticle)" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="20" cy="30.6" r="1.9" fill="#22d3ee"></circle>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">APEX CIPHER</span>
+          <span class="brand__tagline">A technology team by The Secure Script</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary" data-site-nav>
+        <div class="site-nav__capsule" data-nav-capsule>
+          <span class="site-nav__tracker" data-nav-tracker aria-hidden="true"></span>
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="index.html" data-home-link="true"><i class="site-nav__icon fa-regular fa-compass" aria-hidden="true"></i><span>Home</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="about.html"><i class="site-nav__icon fa-regular fa-address-card" aria-hidden="true"></i><span>About</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="services.html"><i class="site-nav__icon fa-regular fa-rectangle-list" aria-hidden="true"></i><span>Services</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="industries.html"><i class="site-nav__icon fa-regular fa-building" aria-hidden="true"></i><span>Industries</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="work.html"><i class="site-nav__icon fa-regular fa-folder-open" aria-hidden="true"></i><span>Work</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="insights.html"><i class="site-nav__icon fa-regular fa-lightbulb" aria-hidden="true"></i><span>Insights</span></a></li>
+          </ul>
+        </div>
+        <div class="site-nav__drawer-foot">
+          <a class="btn btn--primary" href="contact.html"><span>Start a project</span><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></a>
+          <p class="site-nav__drawer-meta">A technology team by The Secure Script</p>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm site-header__cta" href="contact.html"><span>Start a project</span><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+          <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="visually-hidden">Toggle navigation</span>
+        </button>
+      </div>
+
+    </div>
+    <div class="nav-underlay" data-nav-underlay aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         Article hero
+         ============================================================ -->
+    <section class="page-hero page-hero--compact" aria-labelledby="article-title">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <a href="insights.html">Insights</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span aria-current="page">Enterprise AI</span>
+        </nav>
+
+        <div class="page-hero__inner" data-reveal>
+          <p class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Long-form &middot; Applied AI
+          </p>
+
+          <h1 class="page-hero__title" id="article-title">
+            Enterprise AI: what changes when the system has to be depended on
+          </h1>
+
+          <p class="page-hero__lead">
+            A prototype can be built in a week. A system that a regulated team can rely on for
+            critical work is a different problem entirely. This note examines the gap between
+            the two, and why it is almost never about the model.
+          </p>
+
+          <ul class="page-hero__meta">
+            <li>Approx. 12 minute read</li>
+            <li>Written by the APEX CIPHER team</li>
+            <li>Reviewed October 2026</li>
+          </ul>
+        </div>
+
+        <div class="page-hero__media" data-reveal>
+          <div class="page-hero__media-frame">
+            <img class="page-hero-image" src="assets/images/insights/ai-insights.webp" srcset="assets/images/insights/ai-insights-thumb.webp 640w, assets/images/insights/ai-insights.webp 1440w" sizes="(max-width: 960px) 92vw, 560px" alt="Enterprise AI article illustration" width="1440" height="900" decoding="async" fetchpriority="high">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Article body
+         ============================================================ -->
+    <section class="article" aria-label="Article">
+      <div class="container">
+
+        <div class="article__layout">
+
+          <!-- ----------------------------------------------
+               Main article body
+               ---------------------------------------------- -->
+          <article class="article__body" data-reveal>
+
+            <p class="article__lede">
+              Most enterprise AI conversations begin with a demonstration. Someone builds a
+              prototype over a weekend, feeds it a handful of documents, and asks it questions
+              that it answers surprisingly well. The demo lands. A working group is set up. An
+              initiative is named. And then, several months later, the same team is trying to
+              explain why the system that looked so convincing in a conference room is not the
+              system anybody in the business is willing to use for real work.
+            </p>
+
+            <p>
+              This is a common pattern and it is worth understanding what causes it. The
+              prototype and the production system are not on the same spectrum &mdash; they are
+              different kinds of artifact. The prototype answers the question &ldquo;can this
+              model produce plausible output over our content?&rdquo; The production system has
+              to answer a different set of questions: what counts as a correct answer, who
+              checks the output, what happens when it is wrong, and how does the system improve
+              once it is running. Those questions have answers, but none of them are about the
+              model.
+            </p>
+
+            <h2 id="section-task">The task is the first question, not the model</h2>
+
+            <p>
+              We have found it useful to begin with a deliberately narrow framing. Instead of
+              asking &ldquo;what could we do with AI?&rdquo;, we ask &ldquo;what is the specific
+              task this system exists to perform, and who is the person whose work changes
+              because of it?&rdquo; The second question is not rhetorical. In most engagements
+              it identifies one or two individuals whose daily routine is the real target of
+              the project, and whose judgment determines whether the system is useful or merely
+              interesting.
+            </p>
+
+            <p>
+              A working definition of the task has at least four parts:
+            </p>
+
+            <ul>
+              <li>
+                <strong>An input.</strong> The material the system is given. Documentation,
+                tickets, previous cases, structured records.
+              </li>
+              <li>
+                <strong>An output.</strong> What the system is expected to produce. An answer,
+                a summary, a classification, an extracted field, a draft.
+              </li>
+              <li>
+                <strong>A correctness criterion.</strong> The way a knowledgeable person would
+                judge whether the output is acceptable. This is harder to write down than it
+                looks.
+              </li>
+              <li>
+                <strong>A consequence.</strong> What happens if the output is wrong. Who
+                notices, how quickly, and how the error is corrected.
+              </li>
+            </ul>
+
+            <p>
+              The fourth item is the one most often missing from early conversations, and it is
+              the one that determines almost everything downstream. A system whose errors are
+              caught by a reviewer who is going to check the output anyway is a very different
+              engineering problem from a system whose errors are only discovered when an
+              external auditor finds them. Both can be built, but they require different
+              levels of evaluation, different oversight, and different expectations about
+              accuracy.
+            </p>
+
+            <h2 id="section-evaluation">Evaluation is the deliverable</h2>
+
+            <p>
+              If there is one practice that consistently distinguishes useful AI systems from
+              abandoned prototypes, it is the existence of an evaluation set: a curated
+              collection of real tasks, with answers that domain experts agree are correct, and
+              the reasoning or sources that support them. This set is assembled before any
+              architectural decisions are made, and it is used to score every subsequent change.
+            </p>
+
+            <p>
+              The reason this matters is subtle. Without an evaluation set, a team is forced to
+              reason about the system's quality from anecdote. Someone tries a few inputs,
+              reads the outputs, and forms an impression. Impressions formed this way are
+              strongly influenced by which examples were tried, what order they were tried in,
+              and what the reviewer expected to see. They are also expensive to produce, which
+              means they are rarely repeated often enough to catch regressions.
+            </p>
+
+            <p>
+              An evaluation set replaces impression with measurement. It makes it possible to
+              say, honestly, that version B is better than version A on the specific tasks the
+              system is for. It also makes it possible to answer questions that come up later
+              &mdash; whether changing a model provider is safe, whether a retrieval strategy
+              change improved things, whether an update to the prompt introduced a regression
+              in a corner case nobody was watching.
+            </p>
+
+            <blockquote>
+              A team that cannot measure quality cannot improve it deliberately. It can only
+              change things and hope.
+            </blockquote>
+
+            <p>
+              In practice the evaluation set is not a static artifact. It grows as the system
+              encounters new kinds of inputs, shrinks when cases turn out to be unrepresentative,
+              and is maintained by the people who understand the domain rather than by the
+              engineers who built the system. The most useful thing we can do during an
+              engagement is often to help a team establish the practice of maintaining this set
+              themselves, so it survives after we are gone.
+            </p>
+
+            <h2 id="section-retrieval">Retrieval quality usually matters more than the model</h2>
+
+            <p>
+              Among teams building retrieval-augmented systems, there is a persistent tendency
+              to treat the model as the primary variable and retrieval as plumbing. In our
+              experience it is the other way round. A well-tuned retrieval layer with an
+              average model will outperform a poor retrieval layer with an excellent one,
+              almost every time.
+            </p>
+
+            <p>
+              The reason is straightforward. The model can only reason over what it is given.
+              If the passages containing the answer are not in the context window, no amount of
+              model capability will help. And in practice, retrieval is harder than it looks:
+              chunk boundaries affect what gets surfaced, embeddings are sensitive to how
+              documents are structured, and the questions users actually ask rarely map cleanly
+              onto how the source material was organised.
+            </p>
+
+            <p>
+              Effective retrieval work tends to involve several unglamorous activities. Building
+              hybrid search that combines keyword and semantic matching. Adding a reranking step
+              that reorders candidates using a more expensive but more accurate method. Testing
+              chunk sizes against the evaluation set rather than intuition. Handling documents
+              whose meaning depends on their position in a hierarchy &mdash; a clause inside a
+              policy section is not the same as a paragraph on its own.
+            </p>
+
+            <p>
+              The key point is that retrieval quality is measurable. It can be scored, on the
+              same evaluation set, in the same way as generation quality. This makes it a
+              subject for engineering discipline rather than an article of faith, which is a
+              much better position from which to iterate.
+            </p>
+
+            <h2 id="section-oversight">Human oversight is a feature, not a constraint</h2>
+
+            <p>
+              When the consequences of an error are meaningful, every AI system we build
+              includes explicit points at which a person reviews, approves, modifies, or
+              overrules the system's output. This is often framed internally as a cost &mdash;
+              as friction that prevents the system from delivering its full value. We think
+              that framing is wrong.
+            </p>
+
+            <p>
+              Human oversight is what makes a system usable in the first place. Consider the
+              alternative: a system whose outputs are consumed directly without review. In that
+              case, the correctness bar the system must clear is very high, and any failure
+              becomes a visible incident. The evaluation work required to reach that bar is
+              substantial, and the team responsible for the system lives under the pressure of
+              knowing that any unnoticed regression could cause a real problem.
+            </p>
+
+            <p>
+              A system with a well-designed review step operates under different constraints.
+              The output is treated as a first draft or a suggested answer rather than a final
+              one. Errors are caught by the reviewer, who is already in the loop. The
+              correctness bar is lower because a human is between the system and the
+              consequence. And crucially, the reviewer's actions are themselves a signal: over
+              time, the pattern of accepts, edits, and rejections becomes evidence about how
+              the system is actually performing.
+            </p>
+
+            <p>
+              The design of that review interface matters more than it usually gets credit for.
+              A reviewer who has to open a separate tool, cross-reference a source document,
+              and come back to enter a decision is doing work the system should have done for
+              them. A reviewer who sees the answer, the passages it drew on, any uncertainty
+              signals, and clear accept / modify / reject actions is doing work that the system
+              has made easier. The difference between these two interfaces can be the difference
+              between a system that is adopted and one that is quietly abandoned.
+            </p>
+
+            <h2 id="section-traceability">Traceability is not optional in regulated contexts</h2>
+
+            <p>
+              In sectors where decisions are subject to audit &mdash; financial services,
+              healthcare, public sector &mdash; the ability to reconstruct how an output was
+              produced is not a nice-to-have. An auditor does not simply want to know the
+              answer the system gave. They want to know what material it drew on, which version
+              of that material was current at the time, what the intermediate steps were, and
+              who reviewed the result.
+            </p>
+
+            <p>
+              Building this into a system from the start is significantly easier than adding it
+              later. The choices that matter include:
+            </p>
+
+            <ul>
+              <li>
+                Versioning the source corpus, so a query can be answered against the state of
+                the sources at a point in time.
+              </li>
+              <li>
+                Recording the passages retrieved for each query, with stable identifiers that
+                survive reindexing.
+              </li>
+              <li>
+                Logging the review actions taken by the person who handled the output, with
+                enough context to understand the decision.
+              </li>
+              <li>
+                Storing enough of the prompt and configuration to reconstruct what the system
+                was asked to do, without storing sensitive inputs beyond their retention
+                period.
+              </li>
+            </ul>
+
+            <p>
+              None of these are technically difficult. They are easy to defer, which is what
+              usually happens. The cost of deferring them shows up later, in the audit, at the
+              worst possible moment.
+            </p>
+
+            <h2 id="section-operations">Operating the system is the second half of the work</h2>
+
+            <p>
+              The launch of an AI system is not the end of the engagement. It is the point at
+              which the team begins to learn what it has actually built. The signals that matter
+              from that point onward are different from the signals that mattered during
+              development.
+            </p>
+
+            <p>
+              During development, the questions are about correctness: does the system produce
+              the output it should, on the tasks it is for? After launch, the questions become
+              about usage and quality drift. Which tasks are people actually bringing to the
+              system, and which are they avoiding? Is the abstention rate rising, which would
+              suggest a retrieval problem or a shift in the input distribution? Are the review
+              outcomes trending toward more modifications, which might indicate that quality is
+              slipping in ways the evaluation set does not yet capture?
+            </p>
+
+            <p>
+              These questions have answers only if the system is instrumented to answer them.
+              That instrumentation is not the same as standard application monitoring. It
+              requires thinking, at design time, about what signals would tell the team that
+              something has changed &mdash; and building the system so those signals are
+              available.
+            </p>
+
+            <p>
+              The most honest thing we can say about operating an AI system is that it is not a
+              solved problem, for us or for anyone else. The tools are improving, the practices
+              are maturing, and the specific configuration that works for one system does not
+              necessarily transfer to another. What we try to do is build systems whose
+              behaviour is legible enough that the team can see what is happening and make
+              informed changes.
+            </p>
+
+            <h2 id="section-conclusion">A short summary for people who skip to the end</h2>
+
+            <p>
+              The gap between a prototype and a system a regulated team can rely on is not
+              closed by better models. It is closed by the practices that surround the model:
+              a clearly defined task, a curated evaluation set, retrieval treated as
+              engineering rather than plumbing, explicit human oversight, traceability built in
+              from the start, and instrumentation that lets the team observe what the system is
+              doing after launch.
+            </p>
+
+            <p>
+              These practices are not novel. They are variations on the way good software has
+              always been built. What is new is the context in which they are being applied
+              &mdash; systems whose behavior is probabilistic rather than deterministic, whose
+              outputs need review rather than assertion, and whose quality must be measured
+              rather than verified. The disciplines transfer. The specifics do not.
+            </p>
+
+            <p>
+              The teams that get the most out of these systems are not the ones that moved
+              fastest. They are the ones that took the time to answer the questions that
+              prototypes can ignore.
+            </p>
+
+            <!-- =========================================
+                 Article footer: related content
+                 ========================================= -->
+            <div class="case-study__section" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+              <h2>Related reading and services</h2>
+              <p>
+                If the material here connects to something you are working on, the following
+                items are the ones most likely to be useful.
+              </p>
+
+              <div class="accordion-set" data-accordion-set>
+        <div class="accordion-row" data-accordion-row>
+          <article class="card card--service" data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                      <path d="M15.6 8.4 13.2 13.2 8.4 15.6 10.8 10.8Z" fill="none" stroke="currentColor"
+                            stroke-width="1.4" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+              <span class="card__index" aria-hidden="true">01</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+                    <a class="card__link" href="ai-consulting.html">AI Consulting &amp; Strategy</a>
+                  </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+                    The assessment phase that produces the task definition and evaluation
+                    approach this article describes.
+                  </p>
+                  <span class="card__cta" aria-hidden="true">
+                    Explore AI consulting
+                    <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                      <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--service" data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                      <circle cx="6" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                      <circle cx="18" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                      <circle cx="12" cy="17.5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                      <path d="M7.9 8.6 10.8 15.5M16.1 8.6 13.2 15.5M8.2 7h7.6" fill="none"
+                            stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+                    </svg>
+                  </span>
+              <span class="card__index" aria-hidden="true">02</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+                    <a class="card__link" href="ai-solutions.html">Generative AI &amp; Agents</a>
+                  </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+                    The engineering practices, guardrails, and evaluation harnesses used to
+                    build the systems this article discusses.
+                  </p>
+                  <span class="card__cta" aria-hidden="true">
+                    Explore AI solutions
+                    <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                      <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--service" data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                      <path d="M4 19v-5M9.3 19V8.5M14.7 19v-3.5M20 19V5" fill="none" stroke="currentColor"
+                            stroke-width="1.4" stroke-linecap="round"></path>
+                      <path d="M3 21h18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+                    </svg>
+                  </span>
+              <span class="card__index" aria-hidden="true">03</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+                    <a class="card__link" href="case-study-ai-platform.html">
+                      Enterprise AI platform concept
+                    </a>
+                  </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+                    A worked illustrative example of the practices described in this article,
+                    applied to a retrieval-augmented assistant.
+                  </p>
+                  <span class="card__cta" aria-hidden="true">
+                    Read the concept
+                    <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                      <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        </div>
+
+              <div class="section__foot" style="margin-top: 2rem;">
+                <a class="btn btn--outline" href="insights.html">
+                  Back to all insights
+                  <svg class="btn__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                    <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                          stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- ----------------------------------------------
+               Table of contents
+               ---------------------------------------------- -->
+          <aside class="article__aside" aria-label="On this page" data-reveal>
+            <p class="article__aside-title">On this page</p>
+            <nav class="article__toc" aria-label="Article sections">
+              <a href="#section-task">The task is the first question</a>
+              <a href="#section-evaluation">Evaluation is the deliverable</a>
+              <a href="#section-retrieval">Retrieval quality</a>
+              <a href="#section-oversight">Human oversight</a>
+              <a href="#section-traceability">Traceability</a>
+              <a href="#section-operations">Operating the system</a>
+              <a href="#section-conclusion">Summary</a>
+            </nav>
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Final call to action
+         ============================================================ -->
+    <section class="section section--cta" aria-labelledby="article-cta-title">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div class="cta-panel__glow" aria-hidden="true"></div>
+          <div class="cta-panel__content">
+            <p class="eyebrow">Next step</p>
+            <h2 class="cta-panel__title" id="article-cta-title">
+              Working through a similar problem?
+            </h2>
+            <p class="cta-panel__text">
+              If this article connects to something you are actively building, we are happy to
+              talk through the specifics. The most useful conversations usually start with the
+              task, not the technology.
+            </p>
+            <div class="cta-panel__actions">
+              <a class="btn btn--primary" href="contact.html">
+                Start a conversation
+                <svg class="btn__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <a class="btn btn--ghost" href="insights.html">More insights</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="index.html" aria-label="APEX CIPHER, home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="40" height="40" role="presentation" focusable="false">
+              <defs>
+                <linearGradient id="brandMarkGradientFooterArticle" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#4da3ff"></stop>
+                  <stop offset="0.52" stop-color="#7c5cff"></stop>
+                  <stop offset="1" stop-color="#22d3ee"></stop>
+                </linearGradient>
+              </defs>
+              <path d="M20 3.5 34.5 11.8v16.4L20 36.5 5.5 28.2V11.8Z"
+                    fill="none" stroke="url(#brandMarkGradientFooterArticle)" stroke-width="1.6" stroke-linejoin="round"></path>
+              <path d="M13.2 26.4 20 12.6l6.8 13.8"
+                    fill="none" stroke="url(#brandMarkGradientFooterArticle)" stroke-width="2.4"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="20" cy="30.6" r="1.9" fill="#22d3ee"></circle>
+            </svg>
+          </span>
+          <span class="brand__text">
+            <span class="brand__name">APEX CIPHER</span>
+            <span class="brand__tagline">A technology team by The Secure Script</span>
+          </span>
+        </a>
+        <p class="site-footer__note">
+          We design and engineer AI, software, cloud, and data systems for organizations that
+          depend on reliable technology.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer">
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Company</h2>
+          <ul class="site-footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Services</h2>
+          <ul class="site-footer__list">
+            <li><a href="ai-consulting.html">AI Consulting</a></li>
+            <li><a href="ai-solutions.html">AI Solutions</a></li>
+            <li><a href="software-development.html">Software Development</a></li>
+            <li><a href="services.html">All services</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Resources</h2>
+          <ul class="site-footer__list">
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="case-study-ai-platform.html">AI platform concept</a></li>
+            <li><a href="case-study-cloud-modernization.html">Cloud concept</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Legal</h2>
+          <ul class="site-footer__list">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p class="site-footer__copyright">
+        &copy; <span data-current-year>2025</span> APEX CIPHER. A technology team by The Secure Script.
+      </p>
+      <a class="site-footer__top" href="#main">
+        Back to top
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+          <path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/api-client.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/cards.js" defer></script>
+  <script src="assets/js/accordion.js" defer></script>
+  <script src="assets/js/filters.js" defer></script>
+  <script src="assets/js/faq.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
+<script>
+/* Apex Cipher expanding card stacks: progressive enhancement for card collections. */
+(function () {
+  "use strict";
+  var selectors = [".grid--industries", ".work-grid", ".value-grid", ".insight-grid", ".portfolio-grid"];
+
+  function createCarousel(group) {
+    if (!group || group.dataset.carouselReady === "true") return;
+    var items = Array.from(group.children).filter(function (el) {
+      return el.matches("article, .card, .work-card, .industry-card, .value-card, .insight-card, a.card");
+    });
+    if (items.length < 2) return;
+
+    var shell = document.createElement("div");
+    shell.className = "carousel-shell";
+
+    var nav = document.createElement("div");
+    nav.className = "carousel-nav";
+    nav.setAttribute("aria-label", "Card carousel controls");
+
+    var prev = document.createElement("button");
+    prev.type = "button";
+    prev.className = "carousel-arrow carousel-arrow--prev";
+    prev.setAttribute("aria-label", "Previous cards");
+    prev.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+
+    var next = document.createElement("button");
+    next.type = "button";
+    next.className = "carousel-arrow carousel-arrow--next";
+    next.setAttribute("aria-label", "Next cards");
+    next.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+
+    nav.appendChild(prev);
+    nav.appendChild(next);
+
+    if (group.parentNode) {
+      group.parentNode.insertBefore(shell, group);
+    }
+    shell.appendChild(group);
+    shell.appendChild(nav);
+    group.classList.add("carousel-track");
+    group.dataset.carouselReady = "true";
+
+    function getStep() {
+      var firstItem = items[0];
+      if (!firstItem) return 260;
+      var styles = window.getComputedStyle(group);
+      var gap = parseFloat(styles.columnGap || styles.gap || "24");
+      return Math.max(firstItem.getBoundingClientRect().width + gap, 260);
+    }
+
+    function updateButtons() {
+      var maxScroll = Math.max(group.scrollWidth - group.clientWidth, 0);
+      prev.disabled = group.scrollLeft <= 4;
+      next.disabled = group.scrollLeft >= maxScroll - 4;
+      prev.setAttribute("aria-disabled", prev.disabled ? "true" : "false");
+      next.setAttribute("aria-disabled", next.disabled ? "true" : "false");
+      prev.classList.toggle("is-hidden", prev.disabled);
+      next.classList.toggle("is-hidden", next.disabled);
+    }
+
+    prev.addEventListener("click", function () {
+      group.scrollBy({ left: -getStep(), behavior: "smooth" });
+    });
+
+    next.addEventListener("click", function () {
+      group.scrollBy({ left: getStep(), behavior: "smooth" });
+    });
+
+    group.addEventListener("scroll", updateButtons, { passive: true });
+    window.addEventListener("resize", updateButtons);
+    updateButtons();
+  }
+
+  document.querySelectorAll(selectors.join(",")).forEach(function (group) {
+    var items = Array.from(group.children).filter(function (el) {
+      return el.matches("article, .card, .work-card, .industry-card, .value-card, .insight-card, a.card");
+    });
+    if (items.length < 3 || group.dataset.stackReady === "true") return;
+    group.dataset.stackReady = "true";
+    group.classList.add("ac-card-stack");
+    items.forEach(function (item, index) {
+      item.classList.add("ac-stack-item");
+      item.addEventListener("mouseenter", function () { setActive(index); });
+      item.addEventListener("focusin", function () { setActive(index); });
+    });
+    var pagination = document.createElement("div");
+    pagination.className = "ac-stack-pagination";
+    pagination.setAttribute("role", "group");
+    pagination.setAttribute("aria-label", "Choose a card");
+    var dots = items.map(function (item, index) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Show card " + (index + 1));
+      dot.setAttribute("aria-current", index === 0 ? "true" : "false");
+      dot.addEventListener("click", function () {
+        setActive(index);
+        if (window.matchMedia("(max-width: 760px)").matches) {
+          item.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        }
+      });
+      pagination.appendChild(dot);
+      return dot;
+    });
+    var shell = group.closest(".carousel-shell");
+    if (shell) {
+      shell.parentNode.insertBefore(pagination, shell.nextSibling);
+    } else {
+      group.insertAdjacentElement("afterend", pagination);
+    }
+    function setActive(index) {
+      items.forEach(function (item, i) {
+        item.classList.toggle("is-stack-active", i === index);
+        dots[i].setAttribute("aria-current", i === index ? "true" : "false");
+      });
+    }
+    createCarousel(group);
+    setActive(0);
+  });
+})();
+</script>
+  <script src="assets/js/site-enhancements.js" defer></script>
+</body>
+</html>

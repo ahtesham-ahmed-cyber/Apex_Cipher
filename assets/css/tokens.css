@@ -1,0 +1,361 @@
+/* ============================================================
+ *  APEX CIPHER — Design Tokens
+ *  Single source of truth for color, gradient, type, space,
+ *  elevation, motion, and layer values used across the site.
+ *  ============================================================ */
+
+:root {
+
+    /* ----------------------------------------------------------
+     *    Color — Base surfaces
+     *    ---------------------------------------------------------- */
+    --color-void:            #03040a;
+    --color-bg:              #05070f;
+    --color-bg-deep:         #040610;
+    --color-surface:         #0a0e1c;
+    --color-surface-raised:  #0f1426;
+    --color-surface-sunken:  #070a14;
+
+    /* Midnight navy family */
+    --color-navy-900:        #070b1a;
+    --color-navy-800:        #0b1226;
+    --color-navy-700:        #111a33;
+    --color-navy-600:        #182342;
+    --color-navy-500:        #1f2c52;
+
+    /* ----------------------------------------------------------
+     *    Color — Brand accents
+     *    ---------------------------------------------------------- */
+    --color-blue:            #4da3ff;
+    --color-blue-strong:     #2b7de0;
+    --color-blue-soft:       #8dc2ff;
+
+    --color-violet:          #7c5cff;
+    --color-violet-strong:   #5f3fe0;
+    --color-violet-soft:     #a894ff;
+
+    --color-cyan:            #22d3ee;
+    --color-cyan-soft:       #7ce8f7;
+
+    /* ----------------------------------------------------------
+     *    Color — Text
+     *    ---------------------------------------------------------- */
+    --color-text:            #f2f5fb;
+    --color-text-strong:     #ffffff;
+    --color-text-muted:      #9aa5bd;
+    --color-text-subtle:     #6d778f;
+    --color-text-inverse:    #05070f;
+
+    /* ----------------------------------------------------------
+     *    Color — Lines, borders, states
+     *    ---------------------------------------------------------- */
+    --color-border:          rgba(255, 255, 255, 0.08);
+    --color-border-strong:   rgba(255, 255, 255, 0.16);
+    --color-border-accent:   rgba(77, 163, 255, 0.38);
+
+    --color-focus:           #7ce8f7;
+    --color-success:         #34d399;
+    --color-warning:         #fbbf24;
+    --color-danger:          #f87171;
+
+    /* ----------------------------------------------------------
+     *    Color — Translucent fills
+     *    ---------------------------------------------------------- */
+    --fill-subtle:           rgba(255, 255, 255, 0.03);
+    --fill-soft:             rgba(255, 255, 255, 0.055);
+    --fill-medium:           rgba(255, 255, 255, 0.09);
+    --fill-strong:           rgba(255, 255, 255, 0.14);
+
+    --fill-blue-tint:        rgba(77, 163, 255, 0.12);
+    --fill-violet-tint:      rgba(124, 92, 255, 0.12);
+    --fill-cyan-tint:        rgba(34, 211, 238, 0.12);
+
+    /* ----------------------------------------------------------
+     *    Gradient tokens
+     *    ---------------------------------------------------------- */
+
+    /* Headline / text accent — applied with background-clip */
+    --gradient-text: linear-gradient(
+        100deg,
+        var(--color-blue) 0%,
+                                     var(--color-violet) 46%,
+                                     var(--color-cyan) 100%
+    );
+
+    /* Primary action gradient */
+    --gradient-primary: linear-gradient(
+        120deg,
+        var(--color-blue-strong) 0%,
+                                        var(--color-violet) 58%,
+                                        var(--color-cyan) 130%
+    );
+
+    --gradient-primary-hover: linear-gradient(
+        120deg,
+        var(--color-blue) 0%,
+                                              var(--color-violet-soft) 55%,
+                                              var(--color-cyan) 120%
+    );
+
+    /* Decorative structural gradients */
+    --gradient-line: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(77, 163, 255, 0.55) 28%,
+                                     rgba(124, 92, 255, 0.55) 62%,
+                                     transparent 100%
+    );
+
+    --gradient-border: linear-gradient(
+        140deg,
+        rgba(77, 163, 255, 0.55) 0%,
+                                       rgba(124, 92, 255, 0.35) 45%,
+                                       rgba(34, 211, 238, 0.5) 100%
+    );
+
+    /* Card / panel surfaces */
+    --gradient-surface: linear-gradient(
+        165deg,
+        rgba(255, 255, 255, 0.055) 0%,
+                                        rgba(255, 255, 255, 0.012) 42%,
+                                        rgba(255, 255, 255, 0) 100%
+    );
+
+    --gradient-surface-accent: linear-gradient(
+        160deg,
+        rgba(77, 163, 255, 0.14) 0%,
+                                               rgba(124, 92, 255, 0.09) 48%,
+                                               rgba(34, 211, 238, 0.05) 100%
+    );
+
+    /* Atmospheric background lighting */
+    --gradient-atmosphere: radial-gradient(
+        120% 90% at 12% -10%,
+        rgba(77, 163, 255, 0.22) 0%,
+                                           rgba(124, 92, 255, 0.12) 34%,
+                                           rgba(5, 7, 15, 0) 72%
+    );
+
+    --gradient-atmosphere-alt: radial-gradient(
+        100% 80% at 88% 8%,
+        rgba(34, 211, 238, 0.16) 0%,
+                                               rgba(124, 92, 255, 0.1) 40%,
+                                               rgba(5, 7, 15, 0) 78%
+    );
+
+    --gradient-grid-fade: linear-gradient(
+        to bottom,
+        rgba(5, 7, 15, 0) 0%,
+                                          rgba(5, 7, 15, 0.65) 62%,
+                                          var(--color-bg) 100%
+    );
+
+    /* Glow blobs */
+    --gradient-glow-blue: radial-gradient(
+        circle at center,
+        rgba(77, 163, 255, 0.42) 0%,
+                                          rgba(77, 163, 255, 0) 70%
+    );
+
+    --gradient-glow-violet: radial-gradient(
+        circle at center,
+        rgba(124, 92, 255, 0.4) 0%,
+                                            rgba(124, 92, 255, 0) 70%
+    );
+
+    --gradient-glow-cyan: radial-gradient(
+        circle at center,
+        rgba(34, 211, 238, 0.34) 0%,
+                                          rgba(34, 211, 238, 0) 72%
+    );
+
+    /* ----------------------------------------------------------
+     *    Typography
+     *    ---------------------------------------------------------- */
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+    --fw-regular:  400;
+    --fw-medium:   500;
+    --fw-semibold: 600;
+    --fw-bold:     700;
+
+    /* Fluid type scale */
+    --fs-display: clamp(2.35rem, 1.3rem + 3.2vw, 3.6rem);
+    --fs-h1:      clamp(2.2rem, 1.3rem + 3.4vw, 3.6rem);
+    --fs-h2:      clamp(1.75rem, 1.15rem + 2.2vw, 2.7rem);
+    --fs-h3:      clamp(1.25rem, 1.05rem + 0.75vw, 1.6rem);
+    --fs-h4:      clamp(1.08rem, 1rem + 0.35vw, 1.25rem);
+
+    --fs-lead:    clamp(1.02rem, 0.95rem + 0.42vw, 1.22rem);
+    --fs-body:    1rem;
+    --fs-sm:      0.9rem;
+    --fs-xs:      0.8rem;
+    --fs-eyebrow: 0.75rem;
+
+    --lh-tight:   1.08;
+    --lh-snug:    1.24;
+    --lh-normal:  1.5;
+    --lh-relaxed: 1.7;
+
+    --ls-tight:   -0.028em;
+    --ls-snug:    -0.014em;
+    --ls-normal:  0;
+    --ls-wide:    0.02em;
+    --ls-eyebrow: 0.16em;
+
+    /* ----------------------------------------------------------
+     *    Spacing scale
+     *    ---------------------------------------------------------- */
+    --space-3xs: 0.25rem;
+    --space-2xs: 0.5rem;
+    --space-xs:  0.75rem;
+    --space-sm:  1rem;
+    --space-md:  1.5rem;
+    --space-lg:  2rem;
+    --space-xl:  3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+    --space-4xl: 8rem;
+
+    /* Vertical rhythm for page sections */
+    --section-pad-y:      clamp(3.5rem, 2rem + 6vw, 7.5rem);
+    --section-pad-y-sm:   clamp(2.75rem, 2rem + 3.5vw, 4.5rem);
+    --section-gap:        clamp(2.5rem, 1.5rem + 4vw, 5rem);
+
+    /* ----------------------------------------------------------
+     *    Layout
+     *    ---------------------------------------------------------- */
+    --container-max:      1200px;
+    --container-wide:     1400px;
+    --container-narrow:   760px;
+    --container-pad:      clamp(1.15rem, 0.6rem + 2.4vw, 2.5rem);
+
+    --header-height:      76px;
+    --header-height-sm:   64px;
+
+    --measure-text:       68ch;
+    --measure-lead:       58ch;
+
+    /* ----------------------------------------------------------
+     *    Border treatments
+     *    ---------------------------------------------------------- */
+    --border-width:        1px;
+    --border-width-strong: 1.5px;
+
+    --border-hairline: var(--border-width) solid var(--color-border);
+    --border-strong:   var(--border-width) solid var(--color-border-strong);
+
+    /* ----------------------------------------------------------
+     *    Radii
+     *    ---------------------------------------------------------- */
+    --radius-2xs: 4px;
+    --radius-xs:  8px;
+    --radius-sm:  12px;
+    --radius-md:  16px;
+    --radius-lg:  22px;
+    --radius-xl:  30px;
+    --radius-pill: 999px;
+    --radius-circle: 50%;
+
+    /* ----------------------------------------------------------
+     *    Elevation — shadows
+     *    ---------------------------------------------------------- */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.35);
+    --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.42);
+    --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 40px 110px rgba(0, 0, 0, 0.58);
+
+    /* ----------------------------------------------------------
+     *    Glow effects
+     *    ---------------------------------------------------------- */
+    --glow-blue-sm:   0 0 18px rgba(77, 163, 255, 0.28);
+    --glow-blue-md:   0 0 44px rgba(77, 163, 255, 0.32);
+    --glow-violet-md: 0 0 46px rgba(124, 92, 255, 0.3);
+    --glow-cyan-sm:   0 0 20px rgba(34, 211, 238, 0.28);
+
+    --glow-ring:      0 0 0 3px rgba(124, 232, 247, 0.4);
+    --glow-inset:     inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    /* ----------------------------------------------------------
+     *    Z-index layers
+     *    ---------------------------------------------------------- */
+    --z-below:    -1;
+    --z-base:      0;
+    --z-raised:   10;
+    --z-sticky:   60;
+    --z-header:  100;
+    --z-overlay: 200;
+    --z-modal:   300;
+    --z-skip:    400;
+
+    /* ----------------------------------------------------------
+     *    Motion — duration
+     *    ---------------------------------------------------------- */
+    --dur-instant: 90ms;
+    --dur-fast:    160ms;
+    --dur-base:    260ms;
+    --dur-slow:    420ms;
+    --dur-slower:  680ms;
+    --dur-ambient: 14s;
+
+    /* ----------------------------------------------------------
+     *    Motion — easing
+     *    ---------------------------------------------------------- */
+    --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --ease-out:      cubic-bezier(0.16, 0.84, 0.28, 1);
+    --ease-in-out:   cubic-bezier(0.55, 0.06, 0.28, 0.99);
+    --ease-spring:   cubic-bezier(0.34, 1.42, 0.5, 1);
+    --ease-linear:   linear;
+
+    --transition-base:  all var(--dur-base) var(--ease-standard);
+    --transition-color: color var(--dur-fast) var(--ease-standard),
+    background-color var(--dur-fast) var(--ease-standard),
+    border-color var(--dur-fast) var(--ease-standard);
+    --transition-transform: transform var(--dur-base) var(--ease-out);
+
+    /* ----------------------------------------------------------
+     *    Component geometry
+     *    ---------------------------------------------------------- */
+    --btn-height-sm:  40px;
+    --btn-height:     48px;
+    --btn-height-lg:  54px;
+    --btn-pad-x:      1.35rem;
+    --btn-pad-x-lg:   1.75rem;
+
+    --icon-size-sm:   16px;
+    --icon-size:      20px;
+    --icon-size-lg:   24px;
+
+    --avatar-size:    44px;
+
+    /* ----------------------------------------------------------
+     *    Decorative geometry
+     *    ---------------------------------------------------------- */
+    --grid-cell:      56px;
+    --ring-size-lg:   420px;
+    --ring-size-md:   320px;
+    --ring-size-sm:   210px;
+
+    /* ----------------------------------------------------------
+     *    Responsive breakpoint reference values.
+     *    Media queries cannot read custom properties, so these
+     *    document the breakpoints used consistently in the
+     *    responsive.css and component stylesheets.
+     *       xs  : 480px   — large phones
+     *       sm  : 640px   — small tablets
+     *       md  : 820px   — tablets / mobile navigation switch
+     *       lg  : 1040px  — small desktops
+     *       xl  : 1280px  — standard desktops
+     *       2xl : 1600px  — large displays
+     *    ---------------------------------------------------------- */
+    --bp-xs:  480px;
+    --bp-sm:  640px;
+    --bp-md:  820px;
+    --bp-lg:  1040px;
+    --bp-xl:  1280px;
+    --bp-2xl: 1600px;
+}

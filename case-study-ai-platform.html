@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enterprise AI Knowledge Platform — Illustrative Concept | APEX CIPHER</title>
+  <meta name="description" content="An illustrative AI platform concept from APEX CIPHER: a retrieval-augmented assistant for a regulated operations team, documented with context, constraints, approach, and implementation considerations.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/accordion.css">
+  <link rel="stylesheet" href="assets/css/theme-refresh.css">
+</head>
+
+<body class="page page--case-study">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================================================
+       Site header
+       ============================================================ -->
+  <header class="site-header" data-site-header>
+    <div class="container site-header__inner">
+
+      <a class="brand" href="index.html" aria-label="APEX CIPHER, home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="40" height="40" role="presentation" focusable="false">
+            <defs>
+              <linearGradient id="brandMarkGradientAiCase" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#4da3ff"></stop>
+                <stop offset="0.52" stop-color="#7c5cff"></stop>
+                <stop offset="1" stop-color="#22d3ee"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M20 3.5 34.5 11.8v16.4L20 36.5 5.5 28.2V11.8Z"
+                  fill="none" stroke="url(#brandMarkGradientAiCase)" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M13.2 26.4 20 12.6l6.8 13.8"
+                  fill="none" stroke="url(#brandMarkGradientAiCase)" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="20" cy="30.6" r="1.9" fill="#22d3ee"></circle>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">APEX CIPHER</span>
+          <span class="brand__tagline">A technology team by The Secure Script</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary" data-site-nav>
+        <div class="site-nav__capsule" data-nav-capsule>
+          <span class="site-nav__tracker" data-nav-tracker aria-hidden="true"></span>
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="index.html" data-home-link="true"><i class="site-nav__icon fa-regular fa-compass" aria-hidden="true"></i><span>Home</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="about.html"><i class="site-nav__icon fa-regular fa-address-card" aria-hidden="true"></i><span>About</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="services.html"><i class="site-nav__icon fa-regular fa-rectangle-list" aria-hidden="true"></i><span>Services</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="industries.html"><i class="site-nav__icon fa-regular fa-building" aria-hidden="true"></i><span>Industries</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="work.html"><i class="site-nav__icon fa-regular fa-folder-open" aria-hidden="true"></i><span>Work</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="insights.html"><i class="site-nav__icon fa-regular fa-lightbulb" aria-hidden="true"></i><span>Insights</span></a></li>
+          </ul>
+        </div>
+        <div class="site-nav__drawer-foot">
+          <a class="btn btn--primary" href="contact.html"><span>Start a project</span><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></a>
+          <p class="site-nav__drawer-meta">A technology team by The Secure Script</p>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm site-header__cta" href="contact.html"><span>Start a project</span><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+          <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="visually-hidden">Toggle navigation</span>
+        </button>
+      </div>
+
+    </div>
+    <div class="nav-underlay" data-nav-underlay aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         Page hero
+         ============================================================ -->
+    <section class="page-hero" aria-labelledby="case-title">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <a href="work.html">Work</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span aria-current="page">Enterprise AI knowledge platform</span>
+        </nav>
+
+        <div class="page-hero__inner" data-reveal>
+          <p class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Illustrative concept
+          </p>
+
+          <h1 class="page-hero__title" id="case-title">
+            Enterprise AI knowledge platform
+          </h1>
+
+          <p class="page-hero__lead">
+            A retrieval-augmented assistant for a regulated operations team: grounded answers,
+            citation trails, evaluation harnesses, and a review workflow that keeps people in
+            control of decisions with real consequences.
+          </p>
+
+          <ul class="page-hero__meta">
+            <li>Applied AI</li>
+            <li>Retrieval</li>
+            <li>Evaluation</li>
+            <li>Governance</li>
+          </ul>
+        </div>
+
+        <div class="page-hero__media" data-reveal>
+          <div class="page-hero__media-frame">
+            <img class="page-hero-image" src="assets/images/projects/ai-platform.webp" srcset="assets/images/projects/ai-platform-thumb.webp 640w, assets/images/projects/ai-platform.webp 1228w" sizes="(max-width: 960px) 92vw, 560px" alt="Enterprise AI platform concept" width="1440" height="900" decoding="async" fetchpriority="high">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Case study body
+         ============================================================ -->
+    <section class="case-study" aria-labelledby="case-context-title">
+      <div class="container">
+
+        <!-- Metadata -->
+        <dl class="case-study__meta" data-reveal>
+          <div class="case-study__meta-item">
+            <dt>Concept type</dt>
+            <dd>Retrieval-augmented assistant with human review</dd>
+          </div>
+          <div class="case-study__meta-item">
+            <dt>Primary disciplines</dt>
+            <dd>AI engineering, backend services, evaluation</dd>
+          </div>
+          <div class="case-study__meta-item">
+            <dt>Illustrative timeframe</dt>
+            <dd>Assessment, then staged delivery over multiple increments</dd>
+          </div>
+          <div class="case-study__meta-item">
+            <dt>Nature of this document</dt>
+            <dd>Demonstration concept &mdash; not a real client engagement</dd>
+          </div>
+        </dl>
+
+        <p class="case-study__callout" data-reveal>
+          This case study is a demonstration concept. It does not describe a real client, and
+          no specific company outcomes, statistics, or testimonials are implied. The
+          architecture, practices, and trade-offs described are the ones we would bring to a
+          comparable engagement.
+        </p>
+
+        <!-- Context -->
+        <div class="case-study__section" data-reveal>
+          <h2 id="case-context-title">Context</h2>
+          <p>
+            The concept is set inside a regulated operations function: a department whose daily
+            work involves answering questions that are governed by internal policy, external
+            regulation, and precedent from previous cases. The answers matter. A wrong answer
+            can lead to a compliance finding, a customer dispute, or a decision that has to be
+            unwound later.
+          </p>
+          <p>
+            The team that would use the system is experienced. They are not looking for a system
+            to make decisions for them. They want faster access to the material they already
+            trust, and a way to move from a question to a documented answer without manually
+            searching across several internal tools.
+          </p>
+        </div>
+
+        <!-- Problem -->
+        <div class="case-study__section" data-reveal>
+          <h2>Problem</h2>
+          <p>
+            The knowledge needed to answer a typical query is distributed across policy
+            documents, previous case records, an internal wiki that is only partially
+            maintained, and a small number of subject-matter experts who are consistently
+            over-asked. Finding the relevant material takes time, and the resulting answer is
+            difficult to document in a way that satisfies the review requirements.
+          </p>
+          <p>
+            A general-purpose chatbot would not help here, and could make the situation worse.
+            It would produce answers that look authoritative but cannot be traced to a source,
+            which is unacceptable in a context where an auditor will ask where the answer came
+            from.
+          </p>
+        </div>
+
+        <!-- Constraints -->
+        <div class="case-study__section" data-reveal>
+          <h2>Constraints</h2>
+          <p>
+            Several constraints shaped the concept from the outset. These were treated as design
+            inputs, not obstacles.
+          </p>
+          <ul class="case-study__list">
+            <li>
+              <strong>Traceability.</strong> Every answer must be reconstructable: which
+              passages were used, which version of the source, and which reasoning steps were
+              taken.
+            </li>
+            <li>
+              <strong>Data residency and access.</strong> All source material must stay within
+              the organization's existing data boundary, with access rules respected at query
+              time.
+            </li>
+            <li>
+              <strong>Human review.</strong> The system supports decisions but does not make
+              them. Reviewers need a clear place to verify or overturn an answer.
+            </li>
+            <li>
+              <strong>Source freshness.</strong> Policy documents change. The system must
+              reflect the version that was authoritative at the time of the query.
+            </li>
+            <li>
+              <strong>No unsupported confidence.</strong> The system must abstain or escalate
+              rather than produce a plausible answer that cannot be grounded.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Approach -->
+        <div class="case-study__section" data-reveal>
+          <h2>Approach</h2>
+          <p>
+            We would begin with a short assessment phase rather than a build. The assessment
+            exists to answer four questions before significant investment is committed: what
+            tasks the system is actually for, what source material it will draw on, what counts
+            as a correct answer, and who is responsible for reviewing the output.
+          </p>
+
+          <h3>Task definition first</h3>
+          <p>
+            Rather than open-ended question answering, the first release would be scoped to a
+            small number of well-defined task types &mdash; for example, summarising the current
+            policy position on a specific topic, or locating the precedent for a particular
+            kind of case. Narrow scope makes evaluation feasible and makes it possible to say
+            clearly what the system does and does not do.
+          </p>
+
+          <h3>Evaluation before model selection</h3>
+          <p>
+            A small, curated test set would be assembled with the team: real questions, with the
+            answers that the most experienced reviewers would consider correct, and the
+            passages that support them. This set becomes the measurement device for every
+            subsequent decision, including model choice. Choosing a model without it would be
+            guessing.
+          </p>
+
+          <h3>Retrieval as the centre of the system</h3>
+          <p>
+            The quality of the answer depends far more on the quality of retrieval than on the
+            specific language model used. Retrieval would be built with hybrid search across the
+            corpus, tuned against the evaluation set, with versioning so that a query can be
+            answered against the policy that applied at the time it was asked.
+          </p>
+
+          <h3>Review as a first-class feature</h3>
+          <p>
+            The interface would be designed around the review step rather than the query step.
+            Reviewers see the answer, the passages it was drawn from, and any uncertainty
+            signals, and can accept, modify, or reject with a recorded reason. The review
+            decision becomes part of the audit trail.
+          </p>
+        </div>
+
+        <!-- Conceptual solution -->
+        <div class="case-study__section" data-reveal>
+          <h2>Conceptual solution</h2>
+          <p>
+            The system would be organised in four layers, each with a clear responsibility. This
+            separation is deliberate: it keeps the retrieval logic testable in isolation, keeps
+            the evaluation harness independent of any particular model, and makes the audit
+            trail a first-class part of the architecture rather than a reporting feature bolted
+            on at the end.
+          </p>
+
+          <div class="arch" aria-hidden="true" style="margin-top: 1.5rem;">
+            <div class="arch__layer arch__layer--experience">
+              <span class="arch__label">Experience</span>
+              <span class="arch__note">Reviewer interface, query, review actions</span>
+            </div>
+            <div class="arch__layer arch__layer--application">
+              <span class="arch__label">Orchestration</span>
+              <span class="arch__note">Task routing, prompt construction, abstention</span>
+            </div>
+            <div class="arch__layer arch__layer--intelligence">
+              <span class="arch__label">Retrieval &amp; evaluation</span>
+              <span class="arch__note">Hybrid search, ranking, scoring, regression sets</span>
+            </div>
+            <div class="arch__layer arch__layer--platform">
+              <span class="arch__label">Platform</span>
+              <span class="arch__note">Versioned corpus, access control, trace store</span>
+            </div>
+          </div>
+
+          <p style="margin-top: 1.5rem;">
+            Two design choices are worth naming explicitly. First, the corpus is versioned, not
+            just indexed: a query can be answered against the state of the sources at a
+            particular point in time, which matters for audit. Second, the abstention behaviour
+            is not an error case but a normal outcome: when retrieval is weak, the system says
+            so and escalates rather than generating.
+          </p>
+        </div>
+
+        <!-- Implementation considerations -->
+        <div class="case-study__section" data-reveal>
+          <h2>Implementation considerations</h2>
+          <p>
+            Several practical decisions would shape the delivery sequence. These are the ones we
+            would expect to spend the most time on.
+          </p>
+          <ul class="case-study__list">
+            <li>
+              <strong>Corpus curation.</strong> Not every internal document belongs in the
+              system. Working with the operating team to decide what is authoritative, and what
+              should remain outside the boundary, is slow but essential work.
+            </li>
+            <li>
+              <strong>Evaluation ownership.</strong> The evaluation set has to be maintained by
+              people who understand the domain. We would build the tooling and provide the
+              initial set; the long-term ownership belongs inside the organization.
+            </li>
+            <li>
+              <strong>Human review design.</strong> The most important interface in the system
+              is the one that lets reviewers accept, modify, or reject an answer. Getting this
+              workflow right is what makes the system usable rather than novel.
+            </li>
+            <li>
+              <strong>Model portability.</strong> The evaluation harness makes it possible to
+              change model providers without a loss of measured quality. Providers change; the
+              task does not.
+            </li>
+            <li>
+              <strong>Operational telemetry.</strong> Query volume, abstention rate, review
+              outcomes, and evaluation scores would all be visible to the operating team from
+              the first release.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Trade-offs -->
+        <div class="case-study__section" data-reveal>
+          <h2>Trade-offs</h2>
+          <p>
+            Every system involves choices that are better in one dimension and worse in another.
+            The ones below would be stated explicitly at the start of the engagement.
+          </p>
+          <ul class="case-study__list">
+            <li>
+              <strong>Scope over coverage.</strong> A narrow first release is easier to
+              evaluate and safer to operate, but it does less. We would rather ship a small
+              system the team trusts than a broad one they learn to work around.
+            </li>
+            <li>
+              <strong>Abstention over fluency.</strong> The system will sometimes say it does
+              not know. That is a design choice, not a failure, and it costs some of the
+              perceived usefulness that a more confident system would have.
+            </li>
+            <li>
+              <strong>Review friction over speed.</strong> Requiring a human review on every
+              answer slows the workflow down compared to a system that answers directly. In a
+              regulated context, that friction is what makes the output usable.
+            </li>
+            <li>
+              <strong>Provider neutrality over optimisation.</strong> Building against a single
+              provider's features would produce a slightly better result in the short term. The
+              evaluation harness is designed so that this is a reversible decision.
+            </li>
+          </ul>
+        </div>
+
+        <!-- What this concept is not -->
+        <div class="case-study__section" data-reveal>
+          <h2>What this concept is not</h2>
+          <p>
+            It is worth being explicit about the boundaries. This document is a demonstration
+            concept, not a project report.
+          </p>
+          <ul class="case-study__list">
+            <li>It does not describe a real client, industry, or organization.</li>
+            <li>No specific business outcomes, cost savings, or accuracy figures are claimed.</li>
+            <li>The architecture shown is representative, not a specification to be copied.</li>
+            <li>
+              Any model, provider, or tooling references are illustrative; the specific
+              technologies would be chosen during the assessment phase against the evaluation
+              set.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Related concepts and services
+         ============================================================ -->
+    <section class="section section--approach" aria-labelledby="related-title">
+      <div class="container">
+
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Related</p>
+          <h2 class="section__title" id="related-title">
+            Continue exploring <span class="text-gradient">this area</span>
+          </h2>
+          <p class="section__lead">
+            If this concept is close to something you are considering, the following services
+            and concepts are the ones most likely to be relevant.
+          </p>
+        </header>
+
+        <div class="accordion-set" data-accordion-set>
+        <div class="accordion-row" data-accordion-row>
+          <article class="card card--service" data-reveal data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                <path d="M15.6 8.4 13.2 13.2 8.4 15.6 10.8 10.8Z" fill="none" stroke="currentColor"
+                      stroke-width="1.4" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+              <span class="card__index" aria-hidden="true">01</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+              <a class="card__link" href="ai-consulting.html">AI Consulting &amp; Strategy</a>
+            </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+              The assessment phase described in this concept is delivered as a standalone
+              engagement.
+            </p>
+                  <span class="card__cta" aria-hidden="true">
+              Explore AI consulting
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--service" data-reveal data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                <circle cx="6" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                <circle cx="18" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                <circle cx="12" cy="17.5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                <path d="M7.9 8.6 10.8 15.5M16.1 8.6 13.2 15.5M8.2 7h7.6" fill="none"
+                      stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+              </svg>
+            </span>
+              <span class="card__index" aria-hidden="true">02</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+              <a class="card__link" href="ai-solutions.html">Generative AI &amp; Agents</a>
+            </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+              The retrieval, evaluation, and guardrail practices used in this concept.
+            </p>
+                  <span class="card__cta" aria-hidden="true">
+              Explore AI solutions
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--service" data-reveal data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                <path d="M7.6 18.5h8.9a4 4 0 0 0 .7-7.9 5.5 5.5 0 0 0-10.6 1.1 3.8 3.8 0 0 0 1 6.8Z"
+                      fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+              <span class="card__index" aria-hidden="true">03</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+              <a class="card__link" href="case-study-cloud-modernization.html">
+                Cloud modernization programme
+              </a>
+            </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+              Another illustrative concept, this time covering a staged migration from fixed
+              infrastructure to containerized workloads.
+            </p>
+                  <span class="card__cta" aria-hidden="true">
+              Read the cloud concept
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        </div>
+
+        <div class="section__foot" data-reveal>
+          <a class="btn btn--outline" href="work.html">
+            Back to all concepts
+            <svg class="btn__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+              <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Final call to action
+         ============================================================ -->
+    <section class="section section--cta" aria-labelledby="case-cta-title">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div class="cta-panel__glow" aria-hidden="true"></div>
+          <div class="cta-panel__content">
+            <p class="eyebrow">Next step</p>
+            <h2 class="cta-panel__title" id="case-cta-title">
+              Does this resemble a problem you are facing?
+            </h2>
+            <p class="cta-panel__text">
+              If you are considering a retrieval-augmented assistant or a similar system, we
+              would start the conversation the same way this concept begins: with the task, the
+              sources, and the review requirements.
+            </p>
+            <div class="cta-panel__actions">
+              <a class="btn btn--primary" href="contact.html">
+                Start a conversation
+                <svg class="btn__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <a class="btn btn--ghost" href="ai-consulting.html">See AI consulting</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="index.html" aria-label="APEX CIPHER, home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="40" height="40" role="presentation" focusable="false">
+              <defs>
+                <linearGradient id="brandMarkGradientFooterAiCase" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#4da3ff"></stop>
+                  <stop offset="0.52" stop-color="#7c5cff"></stop>
+                  <stop offset="1" stop-color="#22d3ee"></stop>
+                </linearGradient>
+              </defs>
+              <path d="M20 3.5 34.5 11.8v16.4L20 36.5 5.5 28.2V11.8Z"
+                    fill="none" stroke="url(#brandMarkGradientFooterAiCase)" stroke-width="1.6" stroke-linejoin="round"></path>
+              <path d="M13.2 26.4 20 12.6l6.8 13.8"
+                    fill="none" stroke="url(#brandMarkGradientFooterAiCase)" stroke-width="2.4"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="20" cy="30.6" r="1.9" fill="#22d3ee"></circle>
+            </svg>
+          </span>
+          <span class="brand__text">
+            <span class="brand__name">APEX CIPHER</span>
+            <span class="brand__tagline">A technology team by The Secure Script</span>
+          </span>
+        </a>
+        <p class="site-footer__note">
+          We design and engineer AI, software, cloud, and data systems for organizations that
+          depend on reliable technology.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer">
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Company</h2>
+          <ul class="site-footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Services</h2>
+          <ul class="site-footer__list">
+            <li><a href="ai-consulting.html">AI Consulting</a></li>
+            <li><a href="ai-solutions.html">AI Solutions</a></li>
+            <li><a href="software-development.html">Software Development</a></li>
+            <li><a href="services.html">All services</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Resources</h2>
+          <ul class="site-footer__list">
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="case-study-ai-platform.html">AI platform concept</a></li>
+            <li><a href="case-study-cloud-modernization.html">Cloud concept</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Legal</h2>
+          <ul class="site-footer__list">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p class="site-footer__copyright">
+        &copy; <span data-current-year>2025</span> APEX CIPHER. A technology team by The Secure Script.
+      </p>
+      <a class="site-footer__top" href="#main">
+        Back to top
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+          <path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/api-client.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/cards.js" defer></script>
+  <script src="assets/js/accordion.js" defer></script>
+  <script src="assets/js/filters.js" defer></script>
+  <script src="assets/js/faq.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
+<script>
+/* Apex Cipher expanding card stacks: progressive enhancement for card collections. */
+(function () {
+  "use strict";
+  var selectors = [".grid--industries", ".work-grid", ".value-grid", ".insight-grid", ".portfolio-grid"];
+
+  function createCarousel(group) {
+    if (!group || group.dataset.carouselReady === "true") return;
+    var items = Array.from(group.children).filter(function (el) {
+      return el.matches("article, .card, .work-card, .industry-card, .value-card, .insight-card, a.card");
+    });
+    if (items.length < 2) return;
+
+    var shell = document.createElement("div");
+    shell.className = "carousel-shell";
+
+    var nav = document.createElement("div");
+    nav.className = "carousel-nav";
+    nav.setAttribute("aria-label", "Card carousel controls");
+
+    var prev = document.createElement("button");
+    prev.type = "button";
+    prev.className = "carousel-arrow carousel-arrow--prev";
+    prev.setAttribute("aria-label", "Previous cards");
+    prev.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+
+    var next = document.createElement("button");
+    next.type = "button";
+    next.className = "carousel-arrow carousel-arrow--next";
+    next.setAttribute("aria-label", "Next cards");
+    next.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+
+    nav.appendChild(prev);
+    nav.appendChild(next);
+
+    if (group.parentNode) {
+      group.parentNode.insertBefore(shell, group);
+    }
+    shell.appendChild(group);
+    shell.appendChild(nav);
+    group.classList.add("carousel-track");
+    group.dataset.carouselReady = "true";
+
+    function getStep() {
+      var firstItem = items[0];
+      if (!firstItem) return 260;
+      var styles = window.getComputedStyle(group);
+      var gap = parseFloat(styles.columnGap || styles.gap || "24");
+      return Math.max(firstItem.getBoundingClientRect().width + gap, 260);
+    }
+
+    function updateButtons() {
+      var maxScroll = Math.max(group.scrollWidth - group.clientWidth, 0);
+      prev.disabled = group.scrollLeft <= 4;
+      next.disabled = group.scrollLeft >= maxScroll - 4;
+      prev.setAttribute("aria-disabled", prev.disabled ? "true" : "false");
+      next.setAttribute("aria-disabled", next.disabled ? "true" : "false");
+      prev.classList.toggle("is-hidden", prev.disabled);
+      next.classList.toggle("is-hidden", next.disabled);
+    }
+
+    prev.addEventListener("click", function () {
+      group.scrollBy({ left: -getStep(), behavior: "smooth" });
+    });
+
+    next.addEventListener("click", function () {
+      group.scrollBy({ left: getStep(), behavior: "smooth" });
+    });
+
+    group.addEventListener("scroll", updateButtons, { passive: true });
+    window.addEventListener("resize", updateButtons);
+    updateButtons();
+  }
+
+  document.querySelectorAll(selectors.join(",")).forEach(function (group) {
+    var items = Array.from(group.children).filter(function (el) {
+      return el.matches("article, .card, .work-card, .industry-card, .value-card, .insight-card, a.card");
+    });
+    if (items.length < 3 || group.dataset.stackReady === "true") return;
+    group.dataset.stackReady = "true";
+    group.classList.add("ac-card-stack");
+    items.forEach(function (item, index) {
+      item.classList.add("ac-stack-item");
+      item.addEventListener("mouseenter", function () { setActive(index); });
+      item.addEventListener("focusin", function () { setActive(index); });
+    });
+    var pagination = document.createElement("div");
+    pagination.className = "ac-stack-pagination";
+    pagination.setAttribute("role", "group");
+    pagination.setAttribute("aria-label", "Choose a card");
+    var dots = items.map(function (item, index) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Show card " + (index + 1));
+      dot.setAttribute("aria-current", index === 0 ? "true" : "false");
+      dot.addEventListener("click", function () {
+        setActive(index);
+        if (window.matchMedia("(max-width: 760px)").matches) {
+          item.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        }
+      });
+      pagination.appendChild(dot);
+      return dot;
+    });
+    var shell = group.closest(".carousel-shell");
+    if (shell) {
+      shell.parentNode.insertBefore(pagination, shell.nextSibling);
+    } else {
+      group.insertAdjacentElement("afterend", pagination);
+    }
+    function setActive(index) {
+      items.forEach(function (item, i) {
+        item.classList.toggle("is-stack-active", i === index);
+        dots[i].setAttribute("aria-current", i === index ? "true" : "false");
+      });
+    }
+    createCarousel(group);
+    setActive(0);
+  });
+})();
+</script>
+  <script src="assets/js/site-enhancements.js" defer></script>
+</body>
+</html>

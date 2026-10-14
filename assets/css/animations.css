@@ -1,0 +1,382 @@
+/* ============================================================
+ *  APEX CIPHER — Animations
+ *  Keyframes, motion utilities, reveal states, and 3D transform
+ *  behaviours. Every animation here must be non-essential to
+ *  comprehension and must be disabled when the user prefers
+ *  reduced motion.
+ *  ============================================================ */
+
+/* ------------------------------------------------------------
+ *  Keyframes — gradient and glow
+ *  ------------------------------------------------------------ */
+@keyframes textGradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes heroPulse {
+    0% {
+        opacity: 0.55;
+        transform: scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.06);
+    }
+}
+
+@keyframes ctaDrift {
+    0% {
+        background-position: 4% 12%, 82% 82%, 50% 50%;
+        opacity: 0.6;
+    }
+    100% {
+        background-position: 14% 24%, 72% 74%, 56% 42%;
+        opacity: 0.9;
+    }
+}
+
+/* ------------------------------------------------------------
+ *  Keyframes — orbital rings
+ *  ------------------------------------------------------------ */
+@keyframes orbitSpinOuter {
+    0% {
+        transform: rotateX(68deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(68deg) rotateZ(360deg);
+    }
+}
+
+@keyframes orbitSpinMid {
+    0% {
+        transform: rotateX(72deg) rotateZ(28deg);
+    }
+    100% {
+        transform: rotateX(72deg) rotateZ(388deg);
+    }
+}
+
+@keyframes orbitSpinInner {
+    0% {
+        transform: rotateX(78deg) rotateZ(-18deg);
+    }
+    100% {
+        transform: rotateX(78deg) rotateZ(342deg);
+    }
+}
+
+/* ------------------------------------------------------------
+ *  Keyframes — orbital nodes
+ *  Each node travels a distinct circular path at a different
+ *  radius and speed so the composition reads as a system in
+ *  motion rather than a single rotating object.
+ *  ------------------------------------------------------------ */
+@keyframes nodeOrbitA {
+    0%   { transform: translate(-50%, -50%) translateX(190px) translateY(0); }
+    25%  { transform: translate(-50%, -50%) translateX(0) translateY(190px); }
+    50%  { transform: translate(-50%, -50%) translateX(-190px) translateY(0); }
+    75%  { transform: translate(-50%, -50%) translateX(0) translateY(-190px); }
+    100% { transform: translate(-50%, -50%) translateX(190px) translateY(0); }
+}
+
+@keyframes nodeOrbitB {
+    0%   { transform: translate(-50%, -50%) translateX(0) translateY(-150px); }
+    25%  { transform: translate(-50%, -50%) translateX(150px) translateY(0); }
+    50%  { transform: translate(-50%, -50%) translateX(0) translateY(150px); }
+    75%  { transform: translate(-50%, -50%) translateX(-150px) translateY(0); }
+    100% { transform: translate(-50%, -50%) translateX(0) translateY(-150px); }
+}
+
+@keyframes nodeOrbitC {
+    0%   { transform: translate(-50%, -50%) translateX(112px) translateY(0); }
+    50%  { transform: translate(-50%, -50%) translateX(-112px) translateY(0); }
+    100% { transform: translate(-50%, -50%) translateX(112px) translateY(0); }
+}
+
+/* ------------------------------------------------------------
+ *  Keyframes — floating interface panels
+ *  ------------------------------------------------------------ */
+@keyframes floatPanel {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -12px, 0);
+    }
+}
+
+/* ------------------------------------------------------------
+ *  Keyframes — generic reveal and shimmer
+ *  ------------------------------------------------------------ */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 24px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes lineSweep {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes softBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.45;
+    }
+}
+
+/* ------------------------------------------------------------
+ *  Scroll reveal
+ *  Elements opt in with [data-reveal]. animations.js adds
+ *  .is-visible once the element intersects the viewport.
+ *  Without JavaScript the elements remain fully visible because
+ *  the base rule only applies while the reveal system is active
+ *  (the html element carries .js-reveal-ready).
+ *  ------------------------------------------------------------ */
+.js-reveal-ready [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition:
+    opacity var(--dur-slower) var(--ease-out),
+    transform var(--dur-slower) var(--ease-out);
+    will-change: opacity, transform;
+}
+
+.js-reveal-ready [data-reveal].is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Staggered delays applied through a small set of data
+ *  attributes rather than bespoke classes per section. */
+.js-reveal-ready [data-reveal-delay="1"].is-visible { transition-delay: 80ms; }
+.js-reveal-ready [data-reveal-delay="2"].is-visible { transition-delay: 160ms; }
+.js-reveal-ready [data-reveal-delay="3"].is-visible { transition-delay: 240ms; }
+.js-reveal-ready [data-reveal-delay="4"].is-visible { transition-delay: 320ms; }
+.js-reveal-ready [data-reveal-delay="5"].is-visible { transition-delay: 400ms; }
+
+/* ------------------------------------------------------------
+ *  Tilt interaction
+ *  cards.js sets --tilt-x and --tilt-y on elements that carry
+ *  [data-tilt]. The transform is composed from those values so
+ *  hover lighting and shadow states remain independent.
+ *  ------------------------------------------------------------ */
+[data-tilt] {
+    transform-style: preserve-3d;
+    transition: transform var(--dur-slower) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    [data-tilt].is-tilting {
+        transform:
+        perspective(1200px)
+        rotateX(var(--tilt-x, 0deg))
+        rotateY(var(--tilt-y, 0deg));
+    }
+}
+
+/* A pointer-following highlight used sparingly on selected
+ *  surfaces. Position is written to --pointer-x / --pointer-y. */
+[data-pointer-light] {
+    position: relative;
+    isolation: isolate;
+}
+
+[data-pointer-light]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background-image: radial-gradient(
+        260px circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+                                      rgba(77, 163, 255, 0.16),
+                                      rgba(77, 163, 255, 0) 62%
+    );
+    transition: opacity var(--dur-base) var(--ease-standard);
+    z-index: var(--z-raised);
+}
+
+[data-pointer-light]:hover::after {
+    opacity: 1;
+}
+
+/* ------------------------------------------------------------
+ *  Micro-interactions
+ *  ------------------------------------------------------------ */
+
+/* Arrow within buttons and inline links nudges on hover. This
+ *  duplicates no rule from components.css; it defines the
+ *  transition target so reduced-motion can neutralise it. */
+.btn__icon,
+.card__cta svg,
+.inline-link svg {
+    transition: transform var(--dur-base) var(--ease-out);
+}
+
+/* Status indicator gently breathes to read as "live" without
+ *  becoming distracting. */
+.status-dot {
+    animation: softBlink 2.8s var(--ease-in-out) infinite;
+}
+
+/* Chips and tags lift slightly on hover to acknowledge the
+ *  pointer without implying they are interactive controls. */
+.chip,
+.tag {
+    transition:
+    border-color var(--dur-base) var(--ease-standard),
+    background-color var(--dur-base) var(--ease-standard),
+    color var(--dur-base) var(--ease-standard);
+}
+
+.work-card:hover .chip,
+.work-card:focus-within .chip {
+    border-color: var(--color-border-strong);
+    color: var(--color-text);
+}
+
+/* Section entrance for elements that animate without the
+ *  reveal system, such as the hero content block. */
+.hero__content,
+.hero__visual {
+    animation: fadeInUp var(--dur-slower) var(--ease-out) both;
+}
+
+.hero__visual {
+    animation-delay: 120ms;
+}
+
+/* ------------------------------------------------------------
+ *  Motion utilities
+ *  ------------------------------------------------------------ */
+.motion-float {
+    animation: floatPanel 10s var(--ease-in-out) infinite alternate;
+}
+
+.motion-fade {
+    animation: fadeIn var(--dur-slow) var(--ease-out) both;
+}
+
+.motion-sweep {
+    position: relative;
+    overflow: hidden;
+}
+
+.motion-sweep::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 42%;
+    background-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(124, 232, 247, 0.28) 50%,
+                                      transparent 100%
+    );
+    animation: lineSweep 4.5s var(--ease-in-out) infinite;
+    pointer-events: none;
+}
+
+/* ------------------------------------------------------------
+ *  Reduced motion
+ *  All decorative motion is disabled. Reveal elements remain in
+ *  their final state so content is always readable.
+ *  ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+
+    .orbital__glow,
+    .orbital__ring,
+    .orbital__node,
+    .hero-panel,
+    .status-dot,
+    .cta-panel__glow,
+    .motion-float,
+    .motion-sweep::after,
+    .text-gradient {
+        animation: none !important;
+    }
+
+    .hero__content,
+    .hero__visual {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    [data-tilt],
+    [data-tilt].is-tilting {
+        transform: none !important;
+    }
+
+    [data-pointer-light]::after {
+        display: none;
+    }
+
+    .js-reveal-ready [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .btn:hover,
+    .btn--primary:hover,
+    .btn--ghost:hover,
+    .card:hover,
+    .work-card:hover,
+    .industry-card:hover,
+    .bento__item:hover {
+        transform: none;
+    }
+}
+
+/* ------------------------------------------------------------
+ *  Coarse pointer — reduce ambient motion on touch devices.
+ *  Continuous animation drains battery and offers little value
+ *  when the user is not hovering.
+ *  ------------------------------------------------------------ */
+@media (hover: none), (pointer: coarse) {
+    .orbital__glow {
+        animation-duration: 22s;
+    }
+
+    .hero-panel {
+        animation: none;
+    }
+
+    [data-pointer-light]::after {
+        display: none;
+    }
+}

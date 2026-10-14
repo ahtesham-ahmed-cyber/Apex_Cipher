@@ -1,0 +1,338 @@
+/* ============================================================
+ *  APEX CIPHER — Base
+ *  Global element styles, typography defaults, focus handling,
+ *  accessibility utilities, and the document-level backdrop.
+ *  ============================================================ */
+
+html {
+    font-family: var(--font-sans);
+    font-size: 100%;
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-normal);
+    color-scheme: dark;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    line-height: var(--lh-relaxed);
+    letter-spacing: var(--ls-normal);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    position: relative;
+    isolation: isolate;
+}
+
+/* ------------------------------------------------------------
+ *  Ambient backdrop
+ *  Two fixed radial gradients sit beneath all page content to
+ *  give the dark surfaces depth without competing for attention.
+ *  ------------------------------------------------------------ */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-below);
+    pointer-events: none;
+    background-image:
+    var(--gradient-atmosphere),
+    var(--gradient-atmosphere-alt);
+    background-repeat: no-repeat;
+    background-size: 140% 120%, 130% 110%;
+    background-position: 0% -10%, 100% 0%;
+    opacity: 0.9;
+}
+
+/* ------------------------------------------------------------
+ *  Typography
+ *  ------------------------------------------------------------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-text-strong);
+    font-weight: var(--fw-semibold);
+    letter-spacing: var(--ls-snug);
+    line-height: var(--lh-snug);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-tight);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-tight);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+h4 {
+    font-size: var(--fs-h4);
+}
+
+p {
+    max-width: var(--measure-text);
+    color: var(--color-text-muted);
+}
+
+p + p {
+    margin-top: var(--space-sm);
+}
+
+strong {
+    color: var(--color-text);
+    font-weight: var(--fw-semibold);
+}
+
+em {
+    font-style: italic;
+}
+
+small {
+    color: var(--color-text-subtle);
+}
+
+/* ------------------------------------------------------------
+ *  Links
+ *  ------------------------------------------------------------ */
+a {
+    color: var(--color-blue-soft);
+    text-decoration: none;
+    text-underline-offset: 0.22em;
+    transition: var(--transition-color);
+}
+
+a:hover {
+    color: var(--color-cyan-soft);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+    border-radius: var(--radius-2xs);
+}
+
+/* Inline prose links get an underline so they are
+ *  distinguishable from decorative or navigational links. */
+.prose a {
+    color: var(--color-cyan-soft);
+    text-decoration: underline;
+    text-decoration-color: rgba(124, 232, 247, 0.45);
+    text-decoration-thickness: 1px;
+}
+
+.prose a:hover {
+    text-decoration-color: currentColor;
+}
+
+/* ------------------------------------------------------------
+ *  Media
+ *  ------------------------------------------------------------ */
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+}
+
+img {
+    display: block;
+    height: auto;
+    background-color: var(--color-surface-sunken);
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    margin-top: var(--space-xs);
+    color: var(--color-text-subtle);
+    font-size: var(--fs-sm);
+    line-height: var(--lh-normal);
+}
+
+/* ------------------------------------------------------------
+ *  Rules and dividers
+ *  ------------------------------------------------------------ */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: var(--gradient-line);
+    opacity: 0.6;
+    margin: var(--space-xl) 0;
+}
+
+/* ------------------------------------------------------------
+ *  Selection and caret
+ *  ------------------------------------------------------------ */
+::selection {
+    background-color: rgba(124, 92, 255, 0.45);
+    color: var(--color-text-strong);
+    text-shadow: none;
+}
+
+/* ------------------------------------------------------------
+ *  Focus visibility
+ *  Component-level styles refine this where a custom ring is
+ *  more appropriate, but the global default must always remain
+ *  clearly visible for keyboard users.
+ *  ------------------------------------------------------------ */
+:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+/* Remove the default outline only when a component provides its
+ *  own focus treatment through :focus-visible. */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* ------------------------------------------------------------
+ *  Scrollbar styling — progressive enhancement only.
+ *  Browsers that do not support these rules keep their native
+ *  scrollbars, which is perfectly acceptable.
+ *  ------------------------------------------------------------ */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(124, 92, 255, 0.4) transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(
+        180deg,
+        rgba(77, 163, 255, 0.55) 0%,
+                                      rgba(124, 92, 255, 0.55) 100%
+    );
+    border-radius: var(--radius-pill);
+    border: 2px solid var(--color-bg);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(
+        180deg,
+        rgba(77, 163, 255, 0.75) 0%,
+                                      rgba(124, 92, 255, 0.75) 100%
+    );
+}
+
+/* ------------------------------------------------------------
+ *  Accessibility utilities
+ *  ------------------------------------------------------------ */
+
+/* Visually hidden but available to assistive technology. */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Skip link — hidden until focused, then revealed clearly. */
+.skip-link {
+    position: fixed;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    z-index: var(--z-skip);
+    padding: var(--space-xs) var(--space-md);
+    background-color: var(--color-surface-raised);
+    color: var(--color-text-strong);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    border: var(--border-width) solid var(--color-border-accent);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md), var(--glow-blue-sm);
+    transform: translateY(calc(-100% - var(--space-md)));
+    transition: transform var(--dur-base) var(--ease-out);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    transform: translateY(0);
+    outline: none;
+}
+
+/* Decorative graphics must never interfere with assistive
+ *  technology, regardless of the attributes set on the element. */
+[aria-hidden="true"] {
+    pointer-events: none;
+}
+
+[aria-hidden="true"] * {
+    pointer-events: none;
+}
+
+/* Interactive regions that were hidden from pointer events above
+ *  must opt back in explicitly (used by hero panels, tilt cards,
+ *  and other components with decorative wrappers). */
+[data-tilt][aria-hidden="true"],
+[data-tilt] [aria-hidden="true"] {
+    pointer-events: none;
+}
+
+/* ------------------------------------------------------------
+ *  Media query helper defaults
+ *  ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        opacity: 0.7;
+    }
+}
+
+/* ------------------------------------------------------------
+ *  Print — a minimal, readable fallback.
+ *  ------------------------------------------------------------ */
+@media print {
+    body {
+        background: #ffffff;
+        color: #111111;
+    }
+
+    body::before {
+        display: none;
+    }
+
+    a {
+        color: #111111;
+        text-decoration: underline;
+    }
+
+    .site-header,
+    .site-footer,
+    .skip-link,
+    .nav-toggle {
+        display: none !important;
+    }
+}

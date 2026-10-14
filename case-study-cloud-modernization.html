@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud Modernization Programme — Illustrative Concept | APEX CIPHER</title>
+  <meta name="description" content="An illustrative cloud modernization concept from APEX CIPHER: a staged migration from fixed infrastructure to containerized workloads, documented with context, constraints, approach, and implementation considerations.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/accordion.css">
+  <link rel="stylesheet" href="assets/css/theme-refresh.css">
+</head>
+
+<body class="page page--case-study">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================================================
+       Site header
+       ============================================================ -->
+  <header class="site-header" data-site-header>
+    <div class="container site-header__inner">
+
+      <a class="brand" href="index.html" aria-label="APEX CIPHER, home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="40" height="40" role="presentation" focusable="false">
+            <defs>
+              <linearGradient id="brandMarkGradientCloudCase" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#4da3ff"></stop>
+                <stop offset="0.52" stop-color="#7c5cff"></stop>
+                <stop offset="1" stop-color="#22d3ee"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M20 3.5 34.5 11.8v16.4L20 36.5 5.5 28.2V11.8Z"
+                  fill="none" stroke="url(#brandMarkGradientCloudCase)" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M13.2 26.4 20 12.6l6.8 13.8"
+                  fill="none" stroke="url(#brandMarkGradientCloudCase)" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="20" cy="30.6" r="1.9" fill="#22d3ee"></circle>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">APEX CIPHER</span>
+          <span class="brand__tagline">A technology team by The Secure Script</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary" data-site-nav>
+        <div class="site-nav__capsule" data-nav-capsule>
+          <span class="site-nav__tracker" data-nav-tracker aria-hidden="true"></span>
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="index.html" data-home-link="true"><i class="site-nav__icon fa-regular fa-compass" aria-hidden="true"></i><span>Home</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="about.html"><i class="site-nav__icon fa-regular fa-address-card" aria-hidden="true"></i><span>About</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="services.html"><i class="site-nav__icon fa-regular fa-rectangle-list" aria-hidden="true"></i><span>Services</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="industries.html"><i class="site-nav__icon fa-regular fa-building" aria-hidden="true"></i><span>Industries</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="work.html"><i class="site-nav__icon fa-regular fa-folder-open" aria-hidden="true"></i><span>Work</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="insights.html"><i class="site-nav__icon fa-regular fa-lightbulb" aria-hidden="true"></i><span>Insights</span></a></li>
+          </ul>
+        </div>
+        <div class="site-nav__drawer-foot">
+          <a class="btn btn--primary" href="contact.html"><span>Start a project</span><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></a>
+          <p class="site-nav__drawer-meta">A technology team by The Secure Script</p>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm site-header__cta" href="contact.html"><span>Start a project</span><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+          <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="visually-hidden">Toggle navigation</span>
+        </button>
+      </div>
+
+    </div>
+    <div class="nav-underlay" data-nav-underlay aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         Page hero
+         ============================================================ -->
+    <section class="page-hero" aria-labelledby="case-title">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <a href="work.html">Work</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span aria-current="page">Cloud modernization programme</span>
+        </nav>
+
+        <div class="page-hero__inner" data-reveal>
+          <p class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Illustrative concept
+          </p>
+
+          <h1 class="page-hero__title" id="case-title">
+            Cloud modernization programme
+          </h1>
+
+          <p class="page-hero__lead">
+            A staged migration from fixed infrastructure to containerized workloads, with
+            infrastructure as code, progressive delivery, and a rollback plan the operating team
+            can actually execute under pressure.
+          </p>
+
+          <ul class="page-hero__meta">
+            <li>Platform</li>
+            <li>Infrastructure as code</li>
+            <li>Progressive delivery</li>
+            <li>Observability</li>
+          </ul>
+        </div>
+
+        <div class="page-hero__media" data-reveal>
+          <div class="page-hero__media-frame">
+            <img class="page-hero-image" src="assets/images/projects/cloud-modernization.webp" srcset="assets/images/projects/cloud-modernization-thumb.webp 640w, assets/images/projects/cloud-modernization.webp 1440w" sizes="(max-width: 960px) 92vw, 560px" alt="Cloud modernization concept" width="1440" height="900" decoding="async" fetchpriority="high">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Case study body
+         ============================================================ -->
+    <section class="case-study" aria-labelledby="case-context-title">
+      <div class="container">
+
+        <!-- Metadata -->
+        <dl class="case-study__meta" data-reveal>
+          <div class="case-study__meta-item">
+            <dt>Concept type</dt>
+            <dd>Phased platform migration with progressive delivery</dd>
+          </div>
+          <div class="case-study__meta-item">
+            <dt>Primary disciplines</dt>
+            <dd>Platform engineering, cloud architecture, operations</dd>
+          </div>
+          <div class="case-study__meta-item">
+            <dt>Illustrative timeframe</dt>
+            <dd>Assessment, then a sequence of migration waves</dd>
+          </div>
+          <div class="case-study__meta-item">
+            <dt>Nature of this document</dt>
+            <dd>Demonstration concept &mdash; not a real client engagement</dd>
+          </div>
+        </dl>
+
+        <p class="case-study__callout" data-reveal>
+          This case study is a demonstration concept. It does not describe a real client, and
+          no specific company outcomes, cost savings, or performance figures are implied. The
+          architecture, practices, and trade-offs described are the ones we would bring to a
+          comparable engagement.
+        </p>
+
+        <!-- Context -->
+        <div class="case-study__section" data-reveal>
+          <h2 id="case-context-title">Context</h2>
+          <p>
+            The concept is set inside an organization whose core systems have been running for
+            years on fixed virtual machines, provisioned by hand through a cloud console, with
+            configuration captured in runbooks rather than in code. The systems work. They also
+            carry operational debt that has become visible in three ways: recovery from
+            incidents is slow because the environment is difficult to reproduce, changes carry
+            more risk than they should because testing environments drift from production, and
+            cost is high but hard to attribute to the teams responsible for it.
+          </p>
+          <p>
+            The organization has already decided to move toward containerized workloads on
+            managed cloud services. What they have not settled is how to sequence the migration
+            without disrupting the business, and how to avoid recreating the same operational
+            patterns in a new environment.
+          </p>
+        </div>
+
+        <!-- Problem -->
+        <div class="case-study__section" data-reveal>
+          <h2>Problem</h2>
+          <p>
+            The existing environment cannot be migrated in a single move. There are too many
+            services, too many undocumented interdependencies, and no window in which the
+            business can tolerate a full outage. A big-bang migration would be a multi-month
+            freeze followed by a high-risk cutover, which is exactly the kind of change the
+            operating team is least able to absorb.
+          </p>
+          <p>
+            At the same time, migrating workloads one at a time without a shared platform story
+            would produce a new environment that is just as inconsistent as the old one &mdash;
+            only now with more moving parts and no shared operational model.
+          </p>
+        </div>
+
+        <!-- Constraints -->
+        <div class="case-study__section" data-reveal>
+          <h2>Constraints</h2>
+          <p>
+            Several constraints shaped the concept from the outset.
+          </p>
+          <ul class="case-study__list">
+            <li>
+              <strong>No full outage.</strong> The business operates continuously. Every step of
+              the migration must be reversible without an unscheduled downtime event.
+            </li>
+            <li>
+              <strong>Data residency.</strong> Some workloads cannot leave a specific region.
+              The target platform must accommodate this without fragmenting operational
+              tooling.
+            </li>
+            <li>
+              <strong>Existing operations team.</strong> The people who will run the new
+              platform are the ones currently running the old one. The migration must not
+              require a wholesale retraining or a large new hire programme.
+            </li>
+            <li>
+              <strong>Cost visibility.</strong> Finance needs spend attributed to teams and
+              products, not aggregated into a single cloud line item.
+            </li>
+            <li>
+              <strong>Preserve what works.</strong> Some existing practices &mdash; incident
+              response, change review, and on-call rotation &mdash; are effective and should
+              survive the migration rather than be replaced.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Approach -->
+        <div class="case-study__section" data-reveal>
+          <h2>Approach</h2>
+          <p>
+            We would begin with a short assessment phase focused on building an inventory of
+            what actually exists and how the pieces depend on one another. A migration plan
+            built on assumptions about the current environment tends to fall apart in the
+            second wave, when a dependency nobody remembered turns out to be load-bearing.
+          </p>
+
+          <h3>Build the map before moving anything</h3>
+          <p>
+            The first deliverable is not a migration. It is a dependency map of the current
+            environment, produced by combining telemetry, configuration review, and interviews
+            with the people who run the systems. The map tells us which services can move first,
+            which have to move together, and which need to be left alone for now.
+          </p>
+
+          <h3>Platform before workloads</h3>
+          <p>
+            The second step is to stand up the target platform: the container runtime, the
+            deployment pipeline, the configuration management, the logging and metrics stack,
+            and the access model. Only once the platform exists do workloads begin to move onto
+            it. This is slower to start but avoids producing a set of one-off migrations that
+            each invent their own approach.
+          </p>
+
+          <h3>Migration in waves, smallest first</h3>
+          <p>
+            Workloads are grouped into waves by dependency and risk. The first wave is
+            deliberately small and low-risk: services whose failure would be noticed but not
+            cause a customer-facing incident. This is the wave in which the platform team learns
+            what the migration actually involves, and the processes are refined before higher-
+            stakes workloads are touched.
+          </p>
+
+          <h3>Parallel run, then cut over</h3>
+          <p>
+            Each migrated service runs in parallel with its predecessor for a defined period,
+            with traffic shifted gradually. The old service is only decommissioned after the new
+            one has demonstrated stability across a full business cycle. This keeps the rollback
+            path alive for as long as it might be needed.
+          </p>
+
+          <h3>Observability as a deliverable, not a follow-up</h3>
+          <p>
+            Every migrated workload ships with the dashboards, alerts, and runbooks that the
+            operating team needs to run it. This is the part that determines whether the
+            migration reduces operational burden or simply relocates it.
+          </p>
+        </div>
+
+        <!-- Conceptual solution -->
+        <div class="case-study__section" data-reveal>
+          <h2>Conceptual solution</h2>
+          <p>
+            The target architecture separates the platform from the workloads that run on it,
+            with a clear boundary between what the platform team owns and what application teams
+            own. This boundary is what makes the migration reversible: workloads can be moved
+            back to their previous environment without unwinding the platform itself.
+          </p>
+
+          <div class="arch" aria-hidden="true" style="margin-top: 1.5rem;">
+            <div class="arch__layer arch__layer--experience">
+              <span class="arch__label">Applications</span>
+              <span class="arch__note">Service code, configuration, deployment manifests</span>
+            </div>
+            <div class="arch__layer arch__layer--application">
+              <span class="arch__label">Delivery</span>
+              <span class="arch__note">Pipelines, progressive rollout, rollback tooling</span>
+            </div>
+            <div class="arch__layer arch__layer--intelligence">
+              <span class="arch__label">Platform</span>
+              <span class="arch__note">Runtime, networking, secrets, identity</span>
+            </div>
+            <div class="arch__layer arch__layer--platform">
+              <span class="arch__label">Foundation</span>
+              <span class="arch__note">Regions, accounts, IaC, observability stack</span>
+            </div>
+          </div>
+
+          <p style="margin-top: 1.5rem;">
+            Two choices are worth naming explicitly. First, the platform is described in code:
+            every environment can be reproduced from version control, so a drifted environment
+            is detectable rather than discovered during an incident. Second, cost attribution is
+            designed in from the start via tagging policy enforced at the platform layer, not
+            added later through a reporting exercise.
+          </p>
+        </div>
+
+        <!-- Implementation considerations -->
+        <div class="case-study__section" data-reveal>
+          <h2>Implementation considerations</h2>
+          <p>
+            Several practical decisions would shape the delivery sequence. These are the ones we
+            would expect to spend the most time on.
+          </p>
+          <ul class="case-study__list">
+            <li>
+              <strong>Wave sequencing.</strong> Choosing which workloads move first is as much
+              a political decision as a technical one. We would work with the operating team to
+              agree the order, and be explicit about the criteria used.
+            </li>
+            <li>
+              <strong>Environment parity.</strong> The value of the new platform depends on
+              testing and production being genuinely equivalent. This requires discipline in
+              how environments are provisioned, and a policy for what can be configured
+              differently between them.
+            </li>
+            <li>
+              <strong>Secrets and identity.</strong> Moving credentials out of application
+              configuration into a managed secrets store is slow work, and it is the piece most
+              often deferred. We would treat it as part of the platform deliverable, not a
+              follow-up project.
+            </li>
+            <li>
+              <strong>Operational runbooks.</strong> The new platform changes how incidents are
+              diagnosed. Runbooks need to be written and tested by the people who will use them,
+              not delivered as documentation.
+            </li>
+            <li>
+              <strong>Decommissioning discipline.</strong> The migration is not finished until
+              the old environment is gone. Leftover infrastructure is a source of cost and
+              confusion, and decommissioning is easiest when planned from the start.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Trade-offs -->
+        <div class="case-study__section" data-reveal>
+          <h2>Trade-offs</h2>
+          <p>
+            Every migration programme involves choices that are better in one dimension and
+            worse in another. The ones below would be stated explicitly at the start of the
+            engagement.
+          </p>
+          <ul class="case-study__list">
+            <li>
+              <strong>Platform first over fastest first move.</strong> Standing up the target
+              platform before moving workloads delays the first visible migration but produces a
+              coherent environment rather than a collection of special cases.
+            </li>
+            <li>
+              <strong>Parallel running over single cutover.</strong> Running old and new
+              services side by side for a period costs more in infrastructure and operational
+              attention, but keeps the rollback path genuinely usable.
+            </li>
+            <li>
+              <strong>Small first waves over visible progress.</strong> Migrating the easiest
+              workloads first produces less visible progress in the first month but reduces the
+              risk of a high-profile failure early in the programme.
+            </li>
+            <li>
+              <strong>Preservation over modernisation.</strong> Some existing operational
+              practices are effective and are kept, even when a newer approach exists. Changing
+              how the team responds to incidents is not the goal of the migration.
+            </li>
+          </ul>
+        </div>
+
+        <!-- What this concept is not -->
+        <div class="case-study__section" data-reveal>
+          <h2>What this concept is not</h2>
+          <p>
+            It is worth being explicit about the boundaries. This document is a demonstration
+            concept, not a project report.
+          </p>
+          <ul class="case-study__list">
+            <li>It does not describe a real client, industry, or organization.</li>
+            <li>No specific cost savings, performance improvements, or availability figures are claimed.</li>
+            <li>The architecture shown is representative, not a specification to be copied.</li>
+            <li>
+              Any specific cloud provider, container runtime, or tooling references are
+              illustrative; the actual technologies would be chosen during the assessment phase
+              against the organization's constraints.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Related concepts and services
+         ============================================================ -->
+    <section class="section section--approach" aria-labelledby="related-title">
+      <div class="container">
+
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Related</p>
+          <h2 class="section__title" id="related-title">
+            Continue exploring <span class="text-gradient">this area</span>
+          </h2>
+          <p class="section__lead">
+            If this concept is close to something you are considering, the following services
+            and concepts are the ones most likely to be relevant.
+          </p>
+        </header>
+
+        <div class="accordion-set" data-accordion-set>
+        <div class="accordion-row" data-accordion-row>
+          <article class="card card--service" data-reveal data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                <path d="M7.6 18.5h8.9a4 4 0 0 0 .7-7.9 5.5 5.5 0 0 0-10.6 1.1 3.8 3.8 0 0 0 1 6.8Z"
+                      fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+              <span class="card__index" aria-hidden="true">01</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+              <a class="card__link" href="services.html">Cloud Engineering</a>
+            </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+              The platform, infrastructure, and observability practices used throughout this
+              concept.
+            </p>
+                  <span class="card__cta" aria-hidden="true">
+              See cloud engineering
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--service" data-reveal data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                <path d="M9 7 4 12l5 5M15 7l5 5-5 5" fill="none" stroke="currentColor"
+                      stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+              <span class="card__index" aria-hidden="true">02</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+              <a class="card__link" href="software-development.html">Custom Software Development</a>
+            </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+              The application-level work that often accompanies a platform migration, including
+              refactoring for containerization.
+            </p>
+                  <span class="card__cta" aria-hidden="true">
+              Explore software development
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--service" data-reveal data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                <path d="M15.6 8.4 13.2 13.2 8.4 15.6 10.8 10.8Z" fill="none" stroke="currentColor"
+                      stroke-width="1.4" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+              <span class="card__index" aria-hidden="true">03</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+              <a class="card__link" href="case-study-ai-platform.html">
+                Enterprise AI knowledge platform
+              </a>
+            </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+              Another illustrative concept, covering a retrieval-augmented assistant for a
+              regulated operations team.
+            </p>
+                  <span class="card__cta" aria-hidden="true">
+              Read the AI concept
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        </div>
+
+        <div class="section__foot" data-reveal>
+          <a class="btn btn--outline" href="work.html">
+            Back to all concepts
+            <svg class="btn__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+              <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Final call to action
+         ============================================================ -->
+    <section class="section section--cta" aria-labelledby="case-cta-title">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div class="cta-panel__glow" aria-hidden="true"></div>
+          <div class="cta-panel__content">
+            <p class="eyebrow">Next step</p>
+            <h2 class="cta-panel__title" id="case-cta-title">
+              Planning a migration and unsure where to start?
+            </h2>
+            <p class="cta-panel__text">
+              If you are considering a similar programme, we would begin the conversation the
+              same way this concept begins: with an inventory of what exists and a clear view of
+              what must not be disrupted.
+            </p>
+            <div class="cta-panel__actions">
+              <a class="btn btn--primary" href="contact.html">
+                Start a conversation
+                <svg class="btn__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <a class="btn btn--ghost" href="services.html">Review our services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="index.html" aria-label="APEX CIPHER, home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="40" height="40" role="presentation" focusable="false">
+              <defs>
+                <linearGradient id="brandMarkGradientFooterCloudCase" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#4da3ff"></stop>
+                  <stop offset="0.52" stop-color="#7c5cff"></stop>
+                  <stop offset="1" stop-color="#22d3ee"></stop>
+                </linearGradient>
+              </defs>
+              <path d="M20 3.5 34.5 11.8v16.4L20 36.5 5.5 28.2V11.8Z"
+                    fill="none" stroke="url(#brandMarkGradientFooterCloudCase)" stroke-width="1.6" stroke-linejoin="round"></path>
+              <path d="M13.2 26.4 20 12.6l6.8 13.8"
+                    fill="none" stroke="url(#brandMarkGradientFooterCloudCase)" stroke-width="2.4"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="20" cy="30.6" r="1.9" fill="#22d3ee"></circle>
+            </svg>
+          </span>
+          <span class="brand__text">
+            <span class="brand__name">APEX CIPHER</span>
+            <span class="brand__tagline">A technology team by The Secure Script</span>
+          </span>
+        </a>
+        <p class="site-footer__note">
+          We design and engineer AI, software, cloud, and data systems for organizations that
+          depend on reliable technology.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer">
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Company</h2>
+          <ul class="site-footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Services</h2>
+          <ul class="site-footer__list">
+            <li><a href="ai-consulting.html">AI Consulting</a></li>
+            <li><a href="ai-solutions.html">AI Solutions</a></li>
+            <li><a href="software-development.html">Software Development</a></li>
+            <li><a href="services.html">All services</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Resources</h2>
+          <ul class="site-footer__list">
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="case-study-ai-platform.html">AI platform concept</a></li>
+            <li><a href="case-study-cloud-modernization.html">Cloud concept</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Legal</h2>
+          <ul class="site-footer__list">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p class="site-footer__copyright">
+        &copy; <span data-current-year>2025</span> APEX CIPHER. A technology team by The Secure Script.
+      </p>
+      <a class="site-footer__top" href="#main">
+        Back to top
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+          <path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/api-client.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/cards.js" defer></script>
+  <script src="assets/js/accordion.js" defer></script>
+  <script src="assets/js/filters.js" defer></script>
+  <script src="assets/js/faq.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
+<script>
+/* Apex Cipher expanding card stacks: progressive enhancement for card collections. */
+(function () {
+  "use strict";
+  var selectors = [".grid--industries", ".work-grid", ".value-grid", ".insight-grid", ".portfolio-grid"];
+
+  function createCarousel(group) {
+    if (!group || group.dataset.carouselReady === "true") return;
+    var items = Array.from(group.children).filter(function (el) {
+      return el.matches("article, .card, .work-card, .industry-card, .value-card, .insight-card, a.card");
+    });
+    if (items.length < 2) return;
+
+    var shell = document.createElement("div");
+    shell.className = "carousel-shell";
+
+    var nav = document.createElement("div");
+    nav.className = "carousel-nav";
+    nav.setAttribute("aria-label", "Card carousel controls");
+
+    var prev = document.createElement("button");
+    prev.type = "button";
+    prev.className = "carousel-arrow carousel-arrow--prev";
+    prev.setAttribute("aria-label", "Previous cards");
+    prev.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+
+    var next = document.createElement("button");
+    next.type = "button";
+    next.className = "carousel-arrow carousel-arrow--next";
+    next.setAttribute("aria-label", "Next cards");
+    next.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+
+    nav.appendChild(prev);
+    nav.appendChild(next);
+
+    if (group.parentNode) {
+      group.parentNode.insertBefore(shell, group);
+    }
+    shell.appendChild(group);
+    shell.appendChild(nav);
+    group.classList.add("carousel-track");
+    group.dataset.carouselReady = "true";
+
+    function getStep() {
+      var firstItem = items[0];
+      if (!firstItem) return 260;
+      var styles = window.getComputedStyle(group);
+      var gap = parseFloat(styles.columnGap || styles.gap || "24");
+      return Math.max(firstItem.getBoundingClientRect().width + gap, 260);
+    }
+
+    function updateButtons() {
+      var maxScroll = Math.max(group.scrollWidth - group.clientWidth, 0);
+      prev.disabled = group.scrollLeft <= 4;
+      next.disabled = group.scrollLeft >= maxScroll - 4;
+      prev.setAttribute("aria-disabled", prev.disabled ? "true" : "false");
+      next.setAttribute("aria-disabled", next.disabled ? "true" : "false");
+      prev.classList.toggle("is-hidden", prev.disabled);
+      next.classList.toggle("is-hidden", next.disabled);
+    }
+
+    prev.addEventListener("click", function () {
+      group.scrollBy({ left: -getStep(), behavior: "smooth" });
+    });
+
+    next.addEventListener("click", function () {
+      group.scrollBy({ left: getStep(), behavior: "smooth" });
+    });
+
+    group.addEventListener("scroll", updateButtons, { passive: true });
+    window.addEventListener("resize", updateButtons);
+    updateButtons();
+  }
+
+  document.querySelectorAll(selectors.join(",")).forEach(function (group) {
+    var items = Array.from(group.children).filter(function (el) {
+      return el.matches("article, .card, .work-card, .industry-card, .value-card, .insight-card, a.card");
+    });
+    if (items.length < 3 || group.dataset.stackReady === "true") return;
+    group.dataset.stackReady = "true";
+    group.classList.add("ac-card-stack");
+    items.forEach(function (item, index) {
+      item.classList.add("ac-stack-item");
+      item.addEventListener("mouseenter", function () { setActive(index); });
+      item.addEventListener("focusin", function () { setActive(index); });
+    });
+    var pagination = document.createElement("div");
+    pagination.className = "ac-stack-pagination";
+    pagination.setAttribute("role", "group");
+    pagination.setAttribute("aria-label", "Choose a card");
+    var dots = items.map(function (item, index) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Show card " + (index + 1));
+      dot.setAttribute("aria-current", index === 0 ? "true" : "false");
+      dot.addEventListener("click", function () {
+        setActive(index);
+        if (window.matchMedia("(max-width: 760px)").matches) {
+          item.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        }
+      });
+      pagination.appendChild(dot);
+      return dot;
+    });
+    var shell = group.closest(".carousel-shell");
+    if (shell) {
+      shell.parentNode.insertBefore(pagination, shell.nextSibling);
+    } else {
+      group.insertAdjacentElement("afterend", pagination);
+    }
+    function setActive(index) {
+      items.forEach(function (item, i) {
+        item.classList.toggle("is-stack-active", i === index);
+        dots[i].setAttribute("aria-current", i === index ? "true" : "false");
+      });
+    }
+    createCarousel(group);
+    setActive(0);
+  });
+})();
+</script>
+  <script src="assets/js/site-enhancements.js" defer></script>
+</body>
+</html>

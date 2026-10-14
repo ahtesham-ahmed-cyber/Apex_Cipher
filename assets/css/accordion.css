@@ -1,0 +1,251 @@
+/* ============================================================
+ *  APEX CIPHER — Interactive content grid
+ *  SECTION 02 · Horizontal accordion service cards
+ *
+ *   1. Horizontal accordion with hover expansion
+ *   2. Spring-action flex-grow sizing
+ *   3. Adjacent-element muting / defocus dimming layer
+ *   4. Contextual content reveal + responsive grid swapping
+ *
+ *  Markup:  .accordion-set > .accordion-row > .card--service
+ *  Behaviour: assets/js/accordion.js (adds .is-active,
+ *  .is-engaged and data-distance). Loaded after responsive.css.
+ *  ============================================================ */
+
+.accordion-set {
+    --acc-height: clamp(310px, 27vw, 360px);
+    --acc-gap: var(--space-md);
+    --acc-grow: 2.4;
+    --acc-spring: cubic-bezier(0.34, 1.32, 0.64, 1);
+    --acc-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    display: flex;
+    flex-direction: column;
+    gap: var(--acc-gap);
+}
+
+.accordion-row {
+    display: flex;
+    gap: var(--acc-gap);
+    height: var(--acc-height);
+}
+
+/* ------------------------------------------------------------
+ *  Card — collapsed / expanded sizing
+ *  ------------------------------------------------------------ */
+.accordion-row > .card {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100%;
+    justify-content: space-between;
+    gap: var(--space-md);
+    cursor: pointer;
+    transition:
+        flex-grow 0.75s var(--acc-spring),
+        opacity 0.6s var(--acc-ease),
+        translate 0.6s var(--acc-ease),
+        transform 0.6s var(--acc-ease),
+        filter 0.45s var(--acc-ease),
+        border-color var(--dur-base) var(--ease-standard),
+        box-shadow var(--dur-base) var(--ease-standard),
+        background-color var(--dur-base) var(--ease-standard);
+}
+
+.accordion-row > .card.is-active {
+    flex-grow: var(--acc-grow);
+    border-color: transparent;
+    background-color: var(--color-surface-raised);
+    box-shadow: var(--shadow-md), 0 0 40px rgba(77, 163, 255, 0.08);
+}
+
+.accordion-row > .card.is-active::before {
+    opacity: 0.9;
+}
+
+/* ------------------------------------------------------------
+ *  Card — inner structure
+ *  ------------------------------------------------------------ */
+.card__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-sm);
+}
+
+.card__index {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    color: var(--color-text-subtle);
+    transition: color var(--dur-base) var(--ease-standard);
+}
+
+.card.is-active .card__index {
+    color: var(--color-cyan);
+}
+
+.accordion-row > .card .card__body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.accordion-row > .card .card__title {
+    font-size: clamp(1.05rem, 0.9rem + 0.45vw, 1.3rem);
+}
+
+.card.is-active .card__icon {
+    color: var(--color-text-strong);
+    box-shadow: var(--glow-cyan-sm);
+}
+
+/* Contextual reveal: height animates 0fr -> 1fr, content rises in. */
+.card__reveal {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transform: translateY(14px);
+    pointer-events: none;
+    transition:
+        grid-template-rows 0.6s var(--acc-spring),
+        opacity 0.3s var(--acc-ease),
+        transform 0.6s var(--acc-ease);
+}
+
+.card.is-active .card__reveal {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition-delay: 0.14s, 0.16s, 0.14s;
+}
+
+.card__reveal-inner {
+    min-height: 0;
+    min-width: 18rem;
+    max-width: 26rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+}
+
+.card__reveal-inner .card__text {
+    margin-top: var(--space-xs);
+}
+
+/* ------------------------------------------------------------
+ *  Defocus layer
+ *  While the pointer or keyboard focus is inside a row, every
+ *  non-active card is dimmed. Direct neighbours of the active
+ *  card (data-distance="1") are muted the most; the rest less.
+ *  ------------------------------------------------------------ */
+.accordion-row > .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    border-radius: inherit;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(124, 92, 255, 0.08), transparent 60%),
+        rgba(5, 7, 15, 0.64);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s var(--acc-ease);
+}
+
+.accordion-row.is-engaged > .card:not(.is-active) {
+    filter: saturate(0.55) brightness(0.88);
+}
+
+.accordion-row.is-engaged > .card:not(.is-active)::after {
+    opacity: 0.55;
+}
+
+.accordion-row.is-engaged > .card[data-distance="1"]:not(.is-active)::after {
+    opacity: 0.78;
+}
+
+.accordion-row.is-engaged > .card:not(.is-active) .card__text,
+.accordion-row.is-engaged > .card:not(.is-active) .card__title {
+    color: var(--color-text-subtle);
+}
+
+/* ------------------------------------------------------------
+ *  Responsive grid swap (≤ 960px)
+ *  The accordion is replaced by a plain grid: rows dissolve with
+ *  display: contents, every card shows its full content, and the
+ *  existing [data-reveal] scroll animation provides the reveal.
+ *  ------------------------------------------------------------ */
+@media (max-width: 960px) {
+    .accordion-set {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .accordion-row {
+        display: contents;
+    }
+
+    .accordion-row > .card,
+    .accordion-row > .card.is-active {
+        flex: none;
+        height: auto;
+        min-height: 0;
+        cursor: auto;
+        justify-content: flex-start;
+    }
+
+    .card__reveal,
+    .card.is-active .card__reveal {
+        grid-template-rows: 1fr;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        transition: none;
+    }
+
+    .card__reveal-inner {
+        min-width: 0;
+        max-width: none;
+    }
+
+    .card__head {
+        justify-content: flex-start;
+    }
+
+    .card__index {
+        margin-left: auto;
+    }
+
+    .accordion-row > .card::after {
+        display: none;
+    }
+
+    .accordion-row.is-engaged > .card:not(.is-active) {
+        filter: none;
+    }
+
+    .accordion-row.is-engaged > .card:not(.is-active) .card__text,
+    .accordion-row.is-engaged > .card:not(.is-active) .card__title {
+        color: inherit;
+    }
+
+    .accordion-row > .card .card__body {
+        margin-top: var(--space-sm);
+    }
+}
+
+@media (max-width: 620px) {
+    .accordion-set {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .accordion-row > .card,
+    .card__reveal,
+    .accordion-row > .card::after {
+        transition-duration: 0.01ms !important;
+        transition-delay: 0s !important;
+    }
+}

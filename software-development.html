@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software Development | APEX CIPHER</title>
+  <meta name="description" content="Custom software and web application engineering from APEX CIPHER: domain modelling, service and API design, integration, and maintainable delivery that the teams who inherit it can extend.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/accordion.css">
+  <link rel="stylesheet" href="assets/css/theme-refresh.css">
+</head>
+
+<body class="page page--software-development">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================================================
+       Site header
+       ============================================================ -->
+  <header class="site-header" data-site-header>
+    <div class="container site-header__inner">
+
+      <a class="brand" href="index.html" aria-label="APEX CIPHER, home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="40" height="40" role="presentation" focusable="false">
+            <defs>
+              <linearGradient id="brandMarkGradientSoftware" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#4da3ff"></stop>
+                <stop offset="0.52" stop-color="#7c5cff"></stop>
+                <stop offset="1" stop-color="#22d3ee"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M20 3.5 34.5 11.8v16.4L20 36.5 5.5 28.2V11.8Z"
+                  fill="none" stroke="url(#brandMarkGradientSoftware)" stroke-width="1.6" stroke-linejoin="round"></path>
+            <path d="M13.2 26.4 20 12.6l6.8 13.8"
+                  fill="none" stroke="url(#brandMarkGradientSoftware)" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="20" cy="30.6" r="1.9" fill="#22d3ee"></circle>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">APEX CIPHER</span>
+          <span class="brand__tagline">A technology team by The Secure Script</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary" data-site-nav>
+        <div class="site-nav__capsule" data-nav-capsule>
+          <span class="site-nav__tracker" data-nav-tracker aria-hidden="true"></span>
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="index.html" data-home-link="true"><i class="site-nav__icon fa-regular fa-compass" aria-hidden="true"></i><span>Home</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="about.html"><i class="site-nav__icon fa-regular fa-address-card" aria-hidden="true"></i><span>About</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="services.html"><i class="site-nav__icon fa-regular fa-rectangle-list" aria-hidden="true"></i><span>Services</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="industries.html"><i class="site-nav__icon fa-regular fa-building" aria-hidden="true"></i><span>Industries</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="work.html"><i class="site-nav__icon fa-regular fa-folder-open" aria-hidden="true"></i><span>Work</span></a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="insights.html"><i class="site-nav__icon fa-regular fa-lightbulb" aria-hidden="true"></i><span>Insights</span></a></li>
+          </ul>
+        </div>
+        <div class="site-nav__drawer-foot">
+          <a class="btn btn--primary" href="contact.html"><span>Start a project</span><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></a>
+          <p class="site-nav__drawer-meta">A technology team by The Secure Script</p>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm site-header__cta" href="contact.html"><span>Start a project</span><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+          <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="visually-hidden">Toggle navigation</span>
+        </button>
+      </div>
+
+    </div>
+    <div class="nav-underlay" data-nav-underlay aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         Page hero
+         ============================================================ -->
+    <section class="page-hero" aria-labelledby="software-title">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <a href="services.html">Services</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span aria-current="page">Software Development</span>
+        </nav>
+
+        <div class="page-hero__inner" data-reveal>
+          <p class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Service &mdash; Engineering
+          </p>
+
+          <h1 class="page-hero__title" id="software-title">
+            Software that stays <span class="text-gradient">understandable</span>
+          </h1>
+
+          <p class="page-hero__lead">
+            We build back ends, web applications, internal platforms, and integration layers for
+            organizations whose software has to outlast the team that wrote it. The work is
+            judged by how well it holds up two years after launch, not by how impressive the
+            first release looks.
+          </p>
+
+          <ul class="page-hero__meta">
+            <li>Domain modelling</li>
+            <li>Service &amp; API design</li>
+            <li>Web applications</li>
+            <li>Integration</li>
+          </ul>
+        </div>
+
+        <div class="page-hero__media" data-reveal>
+          <div class="page-hero__media-frame">
+            <img class="page-hero-image" src="assets/images/insights/software-engineering.webp" srcset="assets/images/insights/software-engineering-thumb.webp 640w, assets/images/insights/software-engineering.webp 1305w" sizes="(max-width: 960px) 92vw, 560px" alt="Custom software engineering concept" width="1440" height="900" decoding="async" fetchpriority="high">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Positioning strip
+         ============================================================ -->
+    <section class="positioning" aria-label="Engineering principles">
+      <div class="container">
+        <ul class="positioning__list" data-reveal>
+          <li class="positioning__item">
+            <svg class="positioning__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+              <path d="M6 4h9l4 4v12H6z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path>
+              <path d="M15 4v4h4M9 13h7M9 16.5h5" fill="none" stroke="currentColor"
+                    stroke-width="1.4" stroke-linecap="round"></path>
+            </svg>
+            <span class="positioning__text">Readable over clever</span>
+          </li>
+          <li class="positioning__item">
+            <svg class="positioning__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+              <circle cx="6" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+              <circle cx="18" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+              <circle cx="12" cy="17.5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+              <path d="M7.9 8.6 10.8 15.5M16.1 8.6 13.2 15.5M8.2 7h7.6" fill="none"
+                    stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+            </svg>
+            <span class="positioning__text">Explicit interfaces</span>
+          </li>
+          <li class="positioning__item">
+            <svg class="positioning__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+              <path d="M12 3 20 7.5v9L12 21 4 16.5v-9Z" fill="none" stroke="currentColor"
+                    stroke-width="1.4" stroke-linejoin="round"></path>
+              <path d="M8.5 12.2 11 14.7l4.6-5.2" fill="none" stroke="currentColor"
+                    stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <span class="positioning__text">Tested at the seams</span>
+          </li>
+          <li class="positioning__item">
+            <svg class="positioning__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+              <path d="M4 18h16M4 14h10M4 10h16M4 6h8" fill="none" stroke="currentColor"
+                    stroke-width="1.4" stroke-linecap="round"></path>
+            </svg>
+            <span class="positioning__text">Documented decisions</span>
+          </li>
+          <li class="positioning__item">
+            <svg class="positioning__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+              <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"
+                    fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+            </svg>
+            <span class="positioning__text">Safe to operate</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         What maintainable means
+         ============================================================ -->
+    <section class="section" aria-labelledby="maintainable-title">
+      <div class="container technology">
+
+        <div class="technology__content" data-reveal>
+          <p class="eyebrow">Our definition</p>
+          <h2 class="section__title" id="maintainable-title">
+            Maintainable means <span class="text-gradient">the next change is boring</span>
+          </h2>
+          <p class="section__lead">
+            Every software system is written once and changed many times. A codebase is
+            maintainable when the cost of the next change is predictable, when the blast radius
+            of a modification is contained, and when a new engineer can find their way to the
+            right file without a walkthrough from the original author.
+          </p>
+          <p class="section__lead">
+            Those properties do not happen by accident. They come from a deliberate choice of
+            boundaries, naming, and interfaces &mdash; made early, documented clearly, and
+            revisited only when the system genuinely demands it.
+          </p>
+        </div>
+
+        <div class="technology__diagram" data-reveal>
+          <div class="arch" aria-hidden="true">
+            <div class="arch__layer arch__layer--experience">
+              <span class="arch__label">Interfaces</span>
+              <span class="arch__note">Named, versioned, documented</span>
+            </div>
+            <div class="arch__layer arch__layer--application">
+              <span class="arch__label">Boundaries</span>
+              <span class="arch__note">Service and module ownership</span>
+            </div>
+            <div class="arch__layer arch__layer--intelligence">
+              <span class="arch__label">Behaviour</span>
+              <span class="arch__note">Covered by focused tests</span>
+            </div>
+            <div class="arch__layer arch__layer--platform">
+              <span class="arch__label">Operations</span>
+              <span class="arch__note">Observable, reversible, documented</span>
+            </div>
+          </div>
+          <p class="technology__caption">
+            The four layers we consider when judging whether a system is genuinely maintainable.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         What we build
+         ============================================================ -->
+    <section class="section section--approach" aria-labelledby="what-title">
+      <div class="container">
+
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">What we build</p>
+          <h2 class="section__title" id="what-title">
+            Four areas of <span class="text-gradient">software engineering</span>
+          </h2>
+          <p class="section__lead">
+            Most engagements combine several of these. The groupings reflect how the work usually
+            comes together rather than fixed service tiers.
+          </p>
+        </header>
+
+        <article class="capability-block" data-reveal>
+          <div class="capability-block__head">
+            <span class="capability-block__index">01 &mdash; Foundations</span>
+            <h3 class="capability-block__title">Domain modelling &amp; architecture</h3>
+            <p class="capability-block__lead">
+              Before choosing a data model or a service boundary, we make sure the vocabulary
+              matches the business it serves.
+            </p>
+          </div>
+          <div class="capability-block__body">
+            <div class="capability-list">
+              <div class="capability-list__item">
+                <p class="capability-list__title">Vocabulary workshops</p>
+                <p class="capability-list__text">
+                  Sessions with the domain experts to align on the terms the system will use and
+                  what they actually mean.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">Boundary identification</p>
+                <p class="capability-list__text">
+                  Where one part of the system should stop and another should begin, expressed
+                  as contracts rather than files.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">Data model design</p>
+                <p class="capability-list__text">
+                  A schema that reflects how the business reasons, not how the first integration
+                  happened to be shaped.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">Architecture records</p>
+                <p class="capability-list__text">
+                  Written decisions stored alongside the code, so context survives beyond the
+                  original authors.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="capability-block" data-reveal>
+          <div class="capability-block__head">
+            <span class="capability-block__index">02 &mdash; Services</span>
+            <h3 class="capability-block__title">Services, APIs &amp; integration</h3>
+            <p class="capability-block__lead">
+              Back ends and interfaces designed to be stable enough that other teams can build
+              on them without fear.
+            </p>
+          </div>
+          <div class="capability-block__body">
+            <div class="capability-list">
+              <div class="capability-list__item">
+                <p class="capability-list__title">Service design</p>
+                <p class="capability-list__text">
+                  Responsibilities that are clear, scoped, and can be reasoned about on their
+                  own.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">API contracts</p>
+                <p class="capability-list__text">
+                  Versioned, documented interfaces with a clear story for how they will evolve.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">Integration work</p>
+                <p class="capability-list__text">
+                  Connecting to the systems you already depend on, including the ones with
+                  awkward or undocumented interfaces.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">Event and message flows</p>
+                <p class="capability-list__text">
+                  Where asynchronous patterns are appropriate, with clear semantics for
+                  ordering, retries, and failure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="capability-block" data-reveal>
+          <div class="capability-block__head">
+            <span class="capability-block__index">03 &mdash; Applications</span>
+            <h3 class="capability-block__title">Web application engineering</h3>
+            <p class="capability-block__lead">
+              Interfaces built for the people who will use them every day, with performance and
+              accessibility treated as part of the specification.
+            </p>
+          </div>
+          <div class="capability-block__body">
+            <div class="capability-list">
+              <div class="capability-list__item">
+                <p class="capability-list__title">Design systems</p>
+                <p class="capability-list__text">
+                  Reusable tokens and components that keep the product coherent as it grows
+                  across teams and features.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">Accessibility</p>
+                <p class="capability-list__text">
+                  Keyboard support, semantic markup, sufficient contrast, and reduced-motion
+                  respect as baseline requirements.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">Performance budgets</p>
+                <p class="capability-list__text">
+                  Measured limits on the size and cost of the interface, enforced in the
+                  pipeline rather than hoped for.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">Progressive enhancement</p>
+                <p class="capability-list__text">
+                  Core tasks that work reliably even when a script fails or a network is slow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="capability-block" data-reveal>
+          <div class="capability-block__head">
+            <span class="capability-block__index">04 &mdash; Quality</span>
+            <h3 class="capability-block__title">Quality &amp; maintainable delivery</h3>
+            <p class="capability-block__lead">
+              Practices that make small, frequent changes safe rather than heroic, and that
+              leave a system in better shape than we found it.
+            </p>
+          </div>
+          <div class="capability-block__body">
+            <div class="capability-list">
+              <div class="capability-list__item">
+                <p class="capability-list__title">Testing strategy</p>
+                <p class="capability-list__text">
+                  Focused tests at the seams where failures actually matter, rather than blanket
+                  coverage for its own sake.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">Continuous integration</p>
+                <p class="capability-list__text">
+                  Every change is built, tested, and deployable through an automated pipeline
+                  from the first commit.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">Code review</p>
+                <p class="capability-list__text">
+                  Reviews focused on clarity, correctness, and long-term cost rather than style
+                  preferences.
+                </p>
+              </div>
+              <div class="capability-list__item">
+                <p class="capability-list__title">Handover &amp; documentation</p>
+                <p class="capability-list__text">
+                  Runbooks, architecture records, and pairing sessions so your team can own the
+                  system confidently.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Delivery rhythm
+         ============================================================ -->
+    <section class="section" aria-labelledby="rhythm-title">
+      <div class="container">
+
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Delivery rhythm</p>
+          <h2 class="section__title" id="rhythm-title">
+            Working software at the end of <span class="text-gradient">every increment</span>
+          </h2>
+          <p class="section__lead">
+            We keep increments short enough that the plan can adapt without drama. Each cycle
+            ends with something that can be demonstrated, reviewed, and, where appropriate,
+            released.
+          </p>
+        </header>
+
+        <ol class="process" data-reveal>
+          <li class="process__step">
+            <span class="process__index">01</span>
+            <h3 class="process__title">Discover</h3>
+            <p class="process__text">
+              Map the current system, interview the people who run it, and agree on the outcomes
+              that define success.
+            </p>
+          </li>
+          <li class="process__step">
+            <span class="process__index">02</span>
+            <h3 class="process__title">Architect</h3>
+            <p class="process__text">
+              Compare realistic options, document the trade-offs, and commit to a structure the
+              whole team understands.
+            </p>
+          </li>
+          <li class="process__step">
+            <span class="process__index">03</span>
+            <h3 class="process__title">Build</h3>
+            <p class="process__text">
+              Reviewable increments with automated tests, continuous integration, and a working
+              demonstration at the end of each cycle.
+            </p>
+          </li>
+          <li class="process__step">
+            <span class="process__index">04</span>
+            <h3 class="process__title">Hand over</h3>
+            <p class="process__text">
+              Documentation, runbooks, and pairing so your engineers can operate, extend, and
+              improve the system independently.
+            </p>
+          </li>
+        </ol>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Boundaries
+         ============================================================ -->
+    <section class="section section--approach" aria-labelledby="boundaries-title">
+      <div class="container">
+
+        <header class="section__head section__head--split" data-reveal>
+          <div>
+            <p class="eyebrow">Boundaries</p>
+            <h2 class="section__title" id="boundaries-title">
+              Where we are, and are not, <span class="text-gradient">the right partner</span>
+            </h2>
+          </div>
+          <p class="section__lead section__lead--aside">
+            We would rather be direct about fit than discover a mismatch six weeks into a
+            delivery.
+          </p>
+        </header>
+
+        <div class="industry-detail" data-reveal>
+          <div class="industry-detail__head">
+            <h3 class="industry-detail__title">Fit for software delivery</h3>
+            <p class="industry-detail__lead">
+              Software engagements reward close collaboration with the people who will own the
+              result. These are the situations where that works best.
+            </p>
+          </div>
+
+          <div class="pair-panel">
+            <p class="pair-panel__label">A strong fit when</p>
+            <ul class="pair-panel__list">
+              <li>The problem is clear enough to scope but not yet solved.</li>
+              <li>There is at least one senior engineer on the client side to work alongside.</li>
+              <li>The organization is prepared to operate the software once it exists.</li>
+              <li>Requirements are expected to evolve and architecture must accommodate that.</li>
+              <li>Security and compliance constraints can be discussed openly.</li>
+            </ul>
+          </div>
+
+          <div class="pair-panel pair-panel--solution">
+            <p class="pair-panel__label">A poor fit when</p>
+            <ul class="pair-panel__list">
+              <li>The primary need is long-term staff augmentation for unspecified work.</li>
+              <li>A vendor and architecture have already been chosen with no room to reconsider.</li>
+              <li>Outcomes depend on factors nobody on the team can influence.</li>
+              <li>There is no realistic path to internal ownership after handover.</li>
+              <li>The scope is expected to ship faster than it can be properly tested.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Related services
+         ============================================================ -->
+    <section class="section" aria-labelledby="related-title">
+      <div class="container">
+
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Related services</p>
+          <h2 class="section__title" id="related-title">
+            What usually <span class="text-gradient">accompanies</span> a build
+          </h2>
+          <p class="section__lead">
+            Software delivery is rarely isolated. These are the services most often paired with
+            an engineering engagement.
+          </p>
+        </header>
+
+        <div class="accordion-set" data-accordion-set>
+        <div class="accordion-row" data-accordion-row>
+          <article class="card card--service" data-reveal data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                <path d="M15.6 8.4 13.2 13.2 8.4 15.6 10.8 10.8Z" fill="none" stroke="currentColor"
+                      stroke-width="1.4" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+              <span class="card__index" aria-hidden="true">01</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+              <a class="card__link" href="ai-consulting.html">AI Consulting &amp; Strategy</a>
+            </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+              When a software platform is expected to include intelligent features, an early
+              assessment keeps the AI work grounded.
+            </p>
+                  <span class="card__cta" aria-hidden="true">
+              Explore AI consulting
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--service" data-reveal data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                <circle cx="6" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                <circle cx="18" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                <circle cx="12" cy="17.5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+                <path d="M7.9 8.6 10.8 15.5M16.1 8.6 13.2 15.5M8.2 7h7.6" fill="none"
+                      stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+              </svg>
+            </span>
+              <span class="card__index" aria-hidden="true">02</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+              <a class="card__link" href="ai-solutions.html">Generative AI &amp; Agents</a>
+            </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+              Assistants, retrieval systems, and agentic workflows integrated into the product
+              experience.
+            </p>
+                  <span class="card__cta" aria-hidden="true">
+              Explore AI solutions
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--service" data-reveal data-accordion-card>
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" role="presentation" focusable="false">
+                <path d="M7.6 18.5h8.9a4 4 0 0 0 .7-7.9 5.5 5.5 0 0 0-10.6 1.1 3.8 3.8 0 0 0 1 6.8Z"
+                      fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+              <span class="card__index" aria-hidden="true">03</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+              <a class="card__link" href="services.html">Cloud Engineering</a>
+            </h3>
+              <div class="card__reveal">
+                <div class="card__reveal-inner">
+                  <p class="card__text">
+              Infrastructure, containerization, and observability that keep a growing application
+              predictable to operate.
+            </p>
+                  <span class="card__cta" aria-hidden="true">
+              View all services
+              <svg viewBox="0 0 24 24" width="16" height="16" focusable="false">
+                <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Final call to action
+         ============================================================ -->
+    <section class="section section--cta" aria-labelledby="software-cta-title">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div class="cta-panel__glow" aria-hidden="true"></div>
+          <div class="cta-panel__content">
+            <p class="eyebrow">Next step</p>
+            <h2 class="cta-panel__title" id="software-cta-title">
+              Tell us what you are building
+            </h2>
+            <p class="cta-panel__text">
+              Describe the problem, the constraints, and where you are today. We will respond
+              with an honest view of what we would build and how we would approach it.
+            </p>
+            <div class="cta-panel__actions">
+              <a class="btn btn--primary" href="contact.html">
+                Start a project
+                <svg class="btn__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor"
+                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <a class="btn btn--ghost" href="work.html">See selected work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="index.html" aria-label="APEX CIPHER, home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="40" height="40" role="presentation" focusable="false">
+              <defs>
+                <linearGradient id="brandMarkGradientFooterSoftware" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#4da3ff"></stop>
+                  <stop offset="0.52" stop-color="#7c5cff"></stop>
+                  <stop offset="1" stop-color="#22d3ee"></stop>
+                </linearGradient>
+              </defs>
+              <path d="M20 3.5 34.5 11.8v16.4L20 36.5 5.5 28.2V11.8Z"
+                    fill="none" stroke="url(#brandMarkGradientFooterSoftware)" stroke-width="1.6" stroke-linejoin="round"></path>
+              <path d="M13.2 26.4 20 12.6l6.8 13.8"
+                    fill="none" stroke="url(#brandMarkGradientFooterSoftware)" stroke-width="2.4"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="20" cy="30.6" r="1.9" fill="#22d3ee"></circle>
+            </svg>
+          </span>
+          <span class="brand__text">
+            <span class="brand__name">APEX CIPHER</span>
+            <span class="brand__tagline">A technology team by The Secure Script</span>
+          </span>
+        </a>
+        <p class="site-footer__note">
+          We design and engineer AI, software, cloud, and data systems for organizations that
+          depend on reliable technology.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer">
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Company</h2>
+          <ul class="site-footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Services</h2>
+          <ul class="site-footer__list">
+            <li><a href="ai-consulting.html">AI Consulting</a></li>
+            <li><a href="ai-solutions.html">AI Solutions</a></li>
+            <li><a href="software-development.html">Software Development</a></li>
+            <li><a href="services.html">All services</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Resources</h2>
+          <ul class="site-footer__list">
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="case-study-ai-platform.html">AI platform concept</a></li>
+            <li><a href="case-study-cloud-modernization.html">Cloud concept</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__heading">Legal</h2>
+          <ul class="site-footer__list">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p class="site-footer__copyright">
+        &copy; <span data-current-year>2025</span> APEX CIPHER. A technology team by The Secure Script.
+      </p>
+      <a class="site-footer__top" href="#main">
+        Back to top
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+          <path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/api-client.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/cards.js" defer></script>
+  <script src="assets/js/accordion.js" defer></script>
+  <script src="assets/js/filters.js" defer></script>
+  <script src="assets/js/faq.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
+<script>
+/* Apex Cipher expanding card stacks: progressive enhancement for card collections. */
+(function () {
+  "use strict";
+  var selectors = [".grid--industries", ".work-grid", ".value-grid", ".insight-grid", ".portfolio-grid"];
+
+  function createCarousel(group) {
+    if (!group || group.dataset.carouselReady === "true") return;
+    var items = Array.from(group.children).filter(function (el) {
+      return el.matches("article, .card, .work-card, .industry-card, .value-card, .insight-card, a.card");
+    });
+    if (items.length < 2) return;
+
+    var shell = document.createElement("div");
+    shell.className = "carousel-shell";
+
+    var nav = document.createElement("div");
+    nav.className = "carousel-nav";
+    nav.setAttribute("aria-label", "Card carousel controls");
+
+    var prev = document.createElement("button");
+    prev.type = "button";
+    prev.className = "carousel-arrow carousel-arrow--prev";
+    prev.setAttribute("aria-label", "Previous cards");
+    prev.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+
+    var next = document.createElement("button");
+    next.type = "button";
+    next.className = "carousel-arrow carousel-arrow--next";
+    next.setAttribute("aria-label", "Next cards");
+    next.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+
+    nav.appendChild(prev);
+    nav.appendChild(next);
+
+    if (group.parentNode) {
+      group.parentNode.insertBefore(shell, group);
+    }
+    shell.appendChild(group);
+    shell.appendChild(nav);
+    group.classList.add("carousel-track");
+    group.dataset.carouselReady = "true";
+
+    function getStep() {
+      var firstItem = items[0];
+      if (!firstItem) return 260;
+      var styles = window.getComputedStyle(group);
+      var gap = parseFloat(styles.columnGap || styles.gap || "24");
+      return Math.max(firstItem.getBoundingClientRect().width + gap, 260);
+    }
+
+    function updateButtons() {
+      var maxScroll = Math.max(group.scrollWidth - group.clientWidth, 0);
+      prev.disabled = group.scrollLeft <= 4;
+      next.disabled = group.scrollLeft >= maxScroll - 4;
+      prev.setAttribute("aria-disabled", prev.disabled ? "true" : "false");
+      next.setAttribute("aria-disabled", next.disabled ? "true" : "false");
+      prev.classList.toggle("is-hidden", prev.disabled);
+      next.classList.toggle("is-hidden", next.disabled);
+    }
+
+    prev.addEventListener("click", function () {
+      group.scrollBy({ left: -getStep(), behavior: "smooth" });
+    });
+
+    next.addEventListener("click", function () {
+      group.scrollBy({ left: getStep(), behavior: "smooth" });
+    });
+
+    group.addEventListener("scroll", updateButtons, { passive: true });
+    window.addEventListener("resize", updateButtons);
+    updateButtons();
+  }
+
+  document.querySelectorAll(selectors.join(",")).forEach(function (group) {
+    var items = Array.from(group.children).filter(function (el) {
+      return el.matches("article, .card, .work-card, .industry-card, .value-card, .insight-card, a.card");
+    });
+    if (items.length < 3 || group.dataset.stackReady === "true") return;
+    group.dataset.stackReady = "true";
+    group.classList.add("ac-card-stack");
+    items.forEach(function (item, index) {
+      item.classList.add("ac-stack-item");
+      item.addEventListener("mouseenter", function () { setActive(index); });
+      item.addEventListener("focusin", function () { setActive(index); });
+    });
+    var pagination = document.createElement("div");
+    pagination.className = "ac-stack-pagination";
+    pagination.setAttribute("role", "group");
+    pagination.setAttribute("aria-label", "Choose a card");
+    var dots = items.map(function (item, index) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Show card " + (index + 1));
+      dot.setAttribute("aria-current", index === 0 ? "true" : "false");
+      dot.addEventListener("click", function () {
+        setActive(index);
+        if (window.matchMedia("(max-width: 760px)").matches) {
+          item.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        }
+      });
+      pagination.appendChild(dot);
+      return dot;
+    });
+    var shell = group.closest(".carousel-shell");
+    if (shell) {
+      shell.parentNode.insertBefore(pagination, shell.nextSibling);
+    } else {
+      group.insertAdjacentElement("afterend", pagination);
+    }
+    function setActive(index) {
+      items.forEach(function (item, i) {
+        item.classList.toggle("is-stack-active", i === index);
+        dots[i].setAttribute("aria-current", i === index ? "true" : "false");
+      });
+    }
+    createCarousel(group);
+    setActive(0);
+  });
+})();
+</script>
+  <script src="assets/js/site-enhancements.js" defer></script>
+</body>
+</html>
